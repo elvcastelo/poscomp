@@ -1,7 +1,8 @@
 .exam-question-holder
+    border-radius: 30px
     display: flex
     flex-direction: column
-    padding: 10px 80px 0 80px
+    padding: 20px 80px 20px 80px
     margin-bottom: 15px
     transition: 1s ease-in-out
 
@@ -19,13 +20,16 @@
     margin-top: 30px
     padding: 50px
     border-radius: 30px
-    background-color: #f1f1f1
-    color: #f1f1f1
+    background-color: #f8f8f8
     animation: fade-in-text 2s forwards
+
+    .exam-question-explanation-e
+        color: #3b50df
+        font-weight: bold
 
 @media screen and ( max-width: 1119px )
     .exam-question-holder
-        padding: 0 15px 0 15px
+        padding: 15px
 
     .exam-question-explanation
         padding: 30px

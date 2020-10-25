@@ -27,9 +27,8 @@ function ExamQuestion(props) {
                     ))}
                 </div>
 
-                {showAnswer ? <div className="exam-question-explanation"><MathContext content={props.question.explanation} /></div> : ""}
+                {showAnswer ? <div className="exam-question-explanation"><p className="exam-question-explanation-e">Explicação: </p><MathContext content={props.question.explanation} /></div> : ""}
             </div>
-            <hr className="exam-question_del" />
         </>
     );
 }
