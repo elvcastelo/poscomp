@@ -1,0 +1,228 @@
+{
+    "2019": [
+        {
+            "ID": "01",
+            "area": "MATEMÁTICA",
+            "text": "Seja uma matriz quadrada de terceira ordem $ A = \\begin{pmatrix}2 & 3 & 5 \\\\ 7 & 11 & 13 \\\\ 17 & 19 & 23 \\end{pmatrix} $ calcule o determinante:",
+            "items": [
+                "-78",
+                "-84",
+                "84",
+                "78",
+                "-87"
+            ],
+            "rightAnswer": 0,
+            "explanation": "A maneira mais fácil de se chegar na resposta correta é calcular a determinante repetindo as duas primeiras colunas, obtendo portanto a matriz: $$ \\begin{pmatrix}2 & 3 & 5 \\\\ 7 & 11 & 13 \\\\ 17 & 19 & 23 \\end{pmatrix}\\begin{matrix}2 & 3 \\\\ 7 & 11 \\\\ 17 & 19 \\end{matrix} $$ Ao realizarmos a multiplicação das diagonais obteremos a equação $$ \\begin{split}(2 \\times 11 \\times 23) + (3 \\times 13 \\times 17) + (5 \\times 7 \\times 19) \\\\- (5 \\times 11 \\times 17) - (2 \\times 13 \\times 19) - (3 \\times 7 \\times 23)\\end{split} $$ $$ = 506 + 663 + 665 - 935 - 494 - 483 $$ $$ = 1834 - 1912 = -78 $$"
+        },
+        {
+            "ID": "02",
+            "area": "MATEMÁTICA",
+            "text": "Seja $ \\mathbb{R}^3 $. Os vetores $ \\{(1, 2, 3), (2, 5, 8), (1, 3, 7)\\} $ são independentes?",
+            "items": [
+                "Não",
+                "Sim",
+                "Não pode ser calculado",
+                "Sim, se fosse um espaço de $ \\mathbb{R}^2 $",
+                "Seriam independentes se o 1º vetor fosse $ (1, 5, 7) $"
+            ],
+            "rightAnswer": 1,
+            "explanation": "Podemos tentar resolver essa questão visualmente, lembrando que para os vetores $ x_1 $, $ x_2 $ e $ x_3 $ serem independentes temos $$ c_1 x_1 + c_2 x_2 + c_3 x_3 = 0 $$ para algum valor $ c_1 $, $ c_2 $ ou $ c_3 $ diferente de $ 0 $, ou seja, existe uma resolução além da resolução trivial $ c_1 = c_2 = c_3 = 0 $. Todavia como nossa intuição pode estar enganada, o melhor é resolver a equação utilizando-se eliminação, consideremos $$ A = \\begin{pmatrix} 1 & 2 & 1 \\\\ 2 & 5 & 3 \\\\ 3 & 8 & 7 \\end{pmatrix} $$ onde cada coluna é um dos vetores, buscamos então se existe um vetor $ x $ onde $ Ax = 0 $ para $ x \\neq 0 $ (vetor zero). O que irá nos levar às equações: $$ \\begin{split} x_1 + 2x_2 + x_3 = 0 \\\\ 2x_1 + 5x_2 + 3x_3 = 0 \\\\ 3x_1 + 8x_2 + 7x_3 = 0 \\end{split} $$ Ao realizar o processo de Eliminação Gaussiana obteremos: $$ x_1 = - 2x_2 - x_3 \\\\ x_2 = -x_3 \\\\ x_3 = 0 $$ O que nos mostra que a única resolução possível é $ x_1 = x_2 = x_3 = 0 $, logo, os vetores são linearmente independentes."
+        },
+        {
+            "ID": "03",
+            "area": "MATEMÁTICA",
+            "text": "Encontre a equação da reta s, que passa pelo ponto $ A(3, 4) $ e que é perpendicular à reta $ r: x + y - 5 = 0 $.",
+            "items": [
+                "$ r: 5x - 2y + 2 = 0 $",
+                "$ r: x + y + 4 = 0 $",
+                "$ r: 2x + y = 0 $",
+                "$ r: x - y + 1 = 0 $",
+                "$ r: x - 3y + 2 = 0 $"
+            ],
+            "rightAnswer": 3,
+            "explanation": "Duas linhas são perpendiculares se elas fazem um ângulo reto (90°), se uma linha possui inclinação $ m $ então a segunda linha possui inclinação $ \\frac{-1}{m} $. Se estiver em dúvida de qual a inclinação da reta lembre-se da fórmula de uma reta: $ y = mx + b $. Ao colocarmos a reta na forma descrita anteriormente, teremos $ y = -x + 5 $, logo $ m = -1 $ e o recíproco negativo é $ m_1 = \\frac{-1}{-1} = 1 $ (a variável foi nomeada $ m_1 $ por conveniência), para encontrarmos a reta perpendicular temos então a fórmula: $$ y - y_1 = m_1(x - x_1) $$ Inserindo o ponto na qual a reta deve passar - o ponto $ (3, 4) $ - obtemos $$  y - 4 = x - 3  $$ onde resolvendo para $ y $ temos $$ y = x + 1 $$ colocando na forma dos itens da questão teremos portanto que a resposta é $$ x - y + 1 = 0 $$"
+        },
+        {
+            "ID": "04",
+            "area": "MATEMÁTICA",
+            "text": "Encontre as coordenadas do centro $ (C) $ da circunferência de equação $ t: x^2 + y^2 -3x + 5y - 14 = 0 $.",
+            "items": [
+                "$ C(\\frac{1}{2}, \\frac{1}{2}) $",
+                "$ C(\\frac{-1}{2}, \\frac{3}{2}) $",
+                "$ C(\\frac{3}{2}, \\frac{1}{2}) $",
+                "$ C(\\frac{5}{2}, \\frac{5}{2}) $",
+                "$ C(\\frac{3}{2}, \\frac{-5}{2}) $"
+            ],
+            "rightAnswer": 4,
+            "explanation": "Para essa questão iremos primeiramente organizar os termos obtendo portanto $$ (x^2 - 3x) + (y^2 + 5y) = 14 $$ agora, a melhor forma de resolver essa equação é pelo método de completar quadrados onde transformamos equações quadráticas na soma de binomais ao quadrado e um número. O raio da equação de um círculo tem forma $ (x - h)^2 + (y - k)^2 = r^2 $ onde o centro está em $ (h, k) $. Como estamos interessados no centro, descartamos tudo depois da igualdade, caso contrário será mais tempo perdido realizando os cálculos. Multiplicando o segundo termo de cada parênteses por $ \\frac{1}{2} $ teremos $$ h = -3 \\times \\frac{1}{2} = \\frac{-3}{2}$$ e $$ k = 5 \\times \\frac{1}{2} =  \\frac{5}{2} $$ portanto teremos como resultado a equação $ \\Big(x - \\frac{3}{2}\\Big)^2 + \\Big(y + \\frac{5}{2}\\Big)^2 $ o que nos dá o ponto $ C\\Big(\\frac{3}{2}, \\frac{-5}{2}\\Big) $ (lembre-se que os sinais dos pontos estão invertidos na equação)."
+        },
+        {
+            "ID": "05",
+            "area": "MATEMÁTICA",
+            "text": "Calcule o $ \\lim_{x \\to 2} \\frac{x^3 - 8}{6x^2 - 3x^3}: $",
+            "items": [
+                "$ -2 $",
+                "$ \\infty $",
+                "$ 0 $",
+                "$ 1 $",
+                "$ -1 $"
+            ],
+            "rightAnswer": 2,
+            "explanation": "Podemos perceber que ao substituir $ x $ por 2 teremos uma fração na forma indeterminada $ \\frac{0}{0} $, aplicando a Regra de L'Hôpital calculando a derivada da equação chegamos no cálculo do limite $$ \\lim_{x \\to 2} \\frac{3x^2}{12x - 9x^2} $$ agora substituindo $ x $ por 2 teremos $$ \\frac{12}{-12} = -1 $$"
+        },
+        {
+            "ID": "06",
+            "area": "MATEMÁTICA",
+            "text": "Para quais valores de $a$ e $b$, $f(x)$ é contínua em $ x = 1 $ e $ x = 4 $. $$ f(x) = \\begin{cases} x & \\text{se } x \\leq 4 \\\\ ax + b & \\text{se } 1 < x < 4 \\\\ -2x & \\text{se } 4 \\leq x  \\end{cases} $$",
+            "items": [
+                "$ a = -9 $ e $ b = -3 $",
+                "$ a = -3 $ e $ b = 4 $",
+                "$ a = 1 $ e $ b = 1 $",
+                "$ a = -1 $ e $ b = 2 $",
+                "$ a = 2 $ e $ b = 3 $"
+            ],
+            "rightAnswer": 3,
+            "explanation": "Para uma função ser contínua em um ponto $ n $ ela deve possuir limites pela direita e pela esquerda iguais, ou seja $$ \\lim_{x \\to n^+} = \\lim_{x \\to n^-} $$"
+        },
+        {
+            "ID": "07",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 3,
+            "explanation": ""
+        },
+        {
+            "ID": "08",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 3,
+            "explanation": ""
+        },
+        {
+            "ID": "09",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 3,
+            "explanation": ""
+        },
+        {
+            "ID": "10",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 3,
+            "explanation": ""
+        },
+        {
+            "ID": "11",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 3,
+            "explanation": ""
+        },
+        {
+            "ID": "12",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 3,
+            "explanation": ""
+        },
+        {
+            "ID": "13",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 3,
+            "explanation": ""
+        },
+        {
+            "ID": "14",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 3,
+            "explanation": ""
+        },
+        {
+            "ID": "15",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 3,
+            "explanation": ""
+        },
+        {
+            "ID": "16",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 3,
+            "explanation": ""
+        },
+        {
+            "ID": "17",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 3,
+            "explanation": ""
+        },
+        {
+            "ID": "18",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 3,
+            "explanation": ""
+        },
+        {
+            "ID": "19",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 3,
+            "explanation": ""
+        },
+        {
+            "ID": "20",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 3,
+            "explanation": ""
+        }
+    ]
+}
