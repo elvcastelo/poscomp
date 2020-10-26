@@ -8,6 +8,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 20px 80px 20px 80px;
+  margin-bottom: 15px;
   -webkit-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
 }
@@ -52,19 +53,10 @@
 @media screen and (max-width: 1119px) {
   .exam-question-holder {
     padding: 15px;
-    border-radius: 0;
-    -webkit-box-shadow: none;
-            box-shadow: none;
   }
   .exam-question-explanation {
     padding: 30px;
     overflow: scroll;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .exam-question-holder {
-    margin: 0 80px 15px 80px;
   }
 }
 /*# sourceMappingURL=index.css.map */

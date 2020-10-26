@@ -1,6 +1,7 @@
 import React from 'react';
 import examsData from './data/exams.json';
 import ExamQuestion from '../ExamQuestion';
+import Navbar from '../Navbar';
 import './index.css';
 
 function Exam(props) {
@@ -9,6 +10,7 @@ function Exam(props) {
     const data = year in examsData ? examsData[year] : false
     return (
         <div className="exam-holder">
+            <Navbar />
             <h1>POSCOMP {year}</h1>
             {data ? data.map((question) => (
                 <ExamQuestion key={question.ID} question={question} />

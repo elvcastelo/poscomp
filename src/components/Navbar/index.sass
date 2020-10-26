@@ -1,0 +1,28 @@
+.navbar
+    display: flex
+    flex-flow: row wrap
+    justify-content: flex-start
+    align-items: center
+    padding: 20px
+
+    .navbar-logo
+        font-size: 1.6em
+
+    a
+        padding: 0 40px 0 40px
+        text-decoration: none
+        color: #9096c3
+    
+    .navbar-logo, a
+        font-weight: bold
+
+@media screen and ( max-width: 1119px  )
+    .navbar
+        flex-flow: column wrap
+        justify-content: center
+        align-content: center
+
+        a
+            text-align: center
+            padding: 20px 40px 20px 40px
+        
