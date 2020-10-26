@@ -2,12 +2,12 @@
   padding: 30px;
   background-color: white;
   border-radius: 15px;
-  -webkit-box-shadow: 5px 5px 20px rgba(185, 196, 224, 0.4);
-          box-shadow: 5px 5px 20px rgba(185, 196, 224, 0.4);
+  -webkit-box-shadow: 5px 5px 20px rgba(185, 196, 224, 0.2);
+          box-shadow: 5px 5px 20px rgba(185, 196, 224, 0.2);
 }
 
 .home-exams-block .home-exams-block-e {
   font-weight: bold;
-  color: #9096c3;
+  color: #eb4f0b;
 }
 /*# sourceMappingURL=ExamBlock.css.map */

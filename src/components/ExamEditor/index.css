@@ -1,0 +1,64 @@
+.exam-editor-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #eb4f0b;
+  margin: 0 40px 0 40px;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.exam-editor-holder .exam-editor-title, .exam-editor-holder .exam-editor-subtitle {
+  color: white;
+  margin: 0 100px 0 100px;
+}
+
+.exam-editor-holder .exam-editor-title {
+  margin-top: 40px;
+}
+
+.exam-editor-holder .exam-editor-subtitle {
+  margin-bottom: 40px;
+}
+
+.exam-editor-holder .exam-editor-textarea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+  height: 200px;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  resize: none;
+  border: none;
+}
+
+.exam-editor-holder .exam-editor-preview {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.exam-editor-holder .exam-editor-preview p {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 1119px) {
+  .exam-editor-holder {
+    margin: 0;
+    border-radius: 0;
+  }
+  .exam-editor-holder .exam-editor-title, .exam-editor-holder .exam-editor-subtitle {
+    margin: 0;
+  }
+  .exam-editor-holder .exam-editor-subtitle {
+    margin-bottom: 20px;
+  }
+}
+/*# sourceMappingURL=index.css.map */

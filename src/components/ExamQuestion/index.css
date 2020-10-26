@@ -13,6 +13,10 @@
   transition: 1s ease-in-out;
 }
 
+.exam-question-holder .exam-question_text strong {
+  color: #eb4f0b;
+}
+
 .exam-question-holder:nth-child(1) {
   padding-top: 50px;
 }

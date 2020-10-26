@@ -1,4 +1,5 @@
 .navbar {
+  background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,9 +21,10 @@
 }
 
 .navbar a {
+  font-size: 0.9em;
   padding: 0 40px 0 40px;
   text-decoration: none;
-  color: #9096c3;
+  color: #929495;
 }
 
 .navbar .navbar-logo, .navbar a {

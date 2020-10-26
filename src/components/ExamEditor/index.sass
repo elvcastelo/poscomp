@@ -1,0 +1,47 @@
+.exam-editor-holder
+    display: flex
+    flex-direction: column
+    background-color: #eb4f0b
+    margin: 0 40px 0 40px
+    padding: 20px
+    border-radius: 30px
+
+    .exam-editor-title, .exam-editor-subtitle
+        color: white
+        margin: 0 100px 0 100px
+
+    .exam-editor-title
+        margin-top: 40px
+
+    .exam-editor-subtitle
+        margin-bottom: 40px
+
+    .exam-editor-textarea
+        display: flex
+        justify-self: center
+        height: 200px
+        padding: 20px
+        margin-bottom: 40px
+        border-radius: 10px
+        resize: none
+        border: none
+
+    .exam-editor-preview
+        background-color: white
+        padding: 20px
+        border-radius: 10px
+
+        p
+            font-weight: bold
+            font-size: 1.2em
+
+@media screen and ( max-width: 1119px )
+    .exam-editor-holder
+        margin: 0
+        border-radius: 0
+
+        .exam-editor-title, .exam-editor-subtitle
+            margin: 0
+        
+        .exam-editor-subtitle
+            margin-bottom: 20px
