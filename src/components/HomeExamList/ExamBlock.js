@@ -7,7 +7,6 @@ function ExamBlock(props) {
     const allDone = <span role="img" aria-label="completo">✔️</span>
     const incomplete = <span role="img" aria-label="incompleto">❌</span>
     const N = examsData[props.year].length
-    console.log(N)
     
     return (
         <div className="home-exams-block">

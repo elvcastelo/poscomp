@@ -4,8 +4,11 @@ import './index.css';
 function HomeBanner() {
     return (
         <div className="home-banner">
-            <h1>SIMCOMP</h1>
-            <p>Uma ferramenta para lhe ajudar a estudar para o POSCOMP.</p>
+            <div className="home-banner-text-holder">
+                <h1>SIMCOMP</h1>
+                <p>Uma ferramenta para lhe ajudar a estudar para o POSCOMP.</p>
+            </div>
+            <></>
         </div>
     );
 }

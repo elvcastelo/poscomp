@@ -1,21 +1,31 @@
 .home-banner
-    display: flex
-    flex-direction: column
-    justify-content: center
+    display: grid
+    grid-template-columns: 1fr 1fr
     height: 80vh
     padding: 0 80px 0 80px
-    h1, p
-        margin: 0
-        font-weight: bold
-    h1
-        font-size: 5em
-    p
-        color: #929495
+    align-content: center
+    .home-banner-text-holder
+        display: flex
+        flex-direction: column
+        justify-content: center
+        h1, p
+            margin: 0
+            font-weight: bold
+        h1
+            font-size: 6em
+        p
+            color: #929495
+    img
+        width: 100%
+
 @media screen and ( max-width: 1119px )
     .home-banner
+        grid-template-rows: 1fr 1fr
+        grid-template-columns: none
         text-align: center
         padding: 15px 15px 0 15px
         height: 50vh
-        h1
-            font-size: 3em
+        .home-banner-text-holder
+            h1
+                font-size: 3em
     

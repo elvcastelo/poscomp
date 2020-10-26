@@ -81,108 +81,148 @@
                 "$ a = -1 $ e $ b = 2 $",
                 "$ a = 2 $ e $ b = 3 $"
             ],
-            "rightAnswer": 3,
-            "explanation": "Para uma função ser contínua em um ponto $ n $ ela deve possuir limites pela direita e pela esquerda iguais, ou seja $$ \\lim_{x \\to n^+} = \\lim_{x \\to n^-} $$"
+            "rightAnswer": 1,
+            "explanation": "Para uma função ser contínua em um ponto $ n $ temos que pela definição de limites o limite aproximando-se pela esquerda é igual ao limite aproximando-se pela direita, ou seja   $$ \\lim_{x \\to n^-} = \\lim_{x \\to n^+} $$ portanto com $ n = 1 $   vamos ter:   $$ \\begin{split} \\lim_{x \\to 1} x = \\lim_{x \\to 1} ax + b \\\\ 1 = a + b \\end{split} $$   Para $ n = 4 $ iremos seguir a mesma lógica, obtendo  $$ \\begin{split} \\lim_{x \\to 4} ax + b = \\lim_{x \\to 4} -2x \\\\ 4a + b= -8 \\end{split} $$  A resposta para a escolha de $ a $ e $ b $ portanto está na resolução das equações   $$ \\begin{split} a + b = 1 \\\\ 4a + b  = -8 \\end{split} $$  Podemos resolver utilizando a Eliminação Gaussiana, que produzirá o resultado  $$ \\begin{split} a = -3 \\\\ b = 4 \\end{split} $$"
         },
         {
             "ID": "07",
             "area": "MATEMÁTICA",
-            "text": "",
+            "text": "Determine a matriz inversa de $ A = \\begin{pmatrix} 1 & 2 & 2 \\\\ 2 & 1 & 2 \\\\ 2 & 2 & 1 \\end{pmatrix} $.",
             "items": [
-
+                "$ A^{-1} = \\frac{1}{5} \\begin{pmatrix} 1 & 7 & -1 \\\\ 7 & 1 & 1 \\\\ 1 & 3 & 1 \\end{pmatrix} $",
+                "$ A^{-1} = \\frac{1}{5} \\begin{pmatrix} 1 & 0 & -2 \\\\ 5 & 1 & 0 \\\\ 0 & 1 & 1 \\end{pmatrix} $",
+                "$ A^{-1} = \\frac{5}{1} \\begin{pmatrix} 0 & -1 & 1 \\\\ -7 & 3 & 4 \\\\ 7 & 1 & -1 \\end{pmatrix} $",
+                "$ A^{-1} = \\frac{1}{5} \\begin{pmatrix} -3 & 2 & 2 \\\\ 2 & -3 & 2 \\\\ 2 & 2 & -3 \\end{pmatrix} $",
+                "$ A^{-1} = \\frac{1}{3} \\begin{pmatrix} 1 & 3 & -3 \\\\ 5 & 3 & 1 \\\\ 1 & 3 & -3 \\end{pmatrix} $"
             ],
             "rightAnswer": 3,
-            "explanation": ""
+            "explanation": "Podemos calcular a matriz inversa de $ A $ tendo conhecimento da relação  $$ A^{-1} = \\frac{1}{\\det(A)} adj(A) $$  Onde $ adj(A) $ é a matriz auxiliar, sendo esta a transposta da matriz de cofatores $ C $ - ou seja $ adj(A) = C^T $ - onde   $$ C = \\begin{pmatrix} C_{11} & C_{12}  & C_{13} \\\\ C_{21} & C_{22}  & C_{23} \\\\ C_{31} & C_{32}  & C_{33} \\end{pmatrix} $$  Sendo que $ C_{ij} = (-1)^{i + j} (M_{ij}) $, para $ M_{ij} $ igual a determinante da matriz que resulta ao excluir a linha $ i $ e coluna $ j $. Ao resolver para $ C_{11} = -3 $ vemos que só existe uma opção com esse valor no primeiro ponto de sua diagonal e uma vez que os elementos da diagonal não são alterados pela transposição este portanto é o resultado."
         },
         {
             "ID": "08",
             "area": "MATEMÁTICA",
-            "text": "",
+            "text": "Encontre as coordenadas retangulares do ponto (P), cujas coordenadas polares são (3, 120°, 120°, 135°). $$ \\begin{split} x = r \\times \\cos \\alpha \\\\ y = r \\times \\cos \\beta \\\\ z = r \\times \\cos \\gamma \\end{split} $$",
             "items": [
-
+                "$ P(\\frac{-3}{2}, \\frac{-3}{2}, \\frac{-3\\sqrt{2}}{2}) $",
+                "$ P(\\frac{1}{2}, \\frac{1}{2}, \\frac{\\sqrt{2}}{2}) $",
+                "$ P(\\frac{-1}{2}, \\frac{-1}{2}, \\sqrt{2}) $",
+                "$ P(\\frac{3}{2}, \\frac{3}{2}, \\frac{1}{2}) $",
+                "$ P(\\frac{-1}{2}, \\frac{-3}{2}, \\frac{\\sqrt{2}}{2}) $"
             ],
-            "rightAnswer": 3,
-            "explanation": ""
+            "rightAnswer": 0,
+            "explanation": "A maior dificuldade nessa questão é calcular o ângulo, o que podemos resolver facilmente ao lembrar da identidade   $$ \\cos(180°- \\theta_0) = -\\cos(\\theta_1) $$  Onde $ \\theta_0 $ é o ângulo fornecido pela questão e $ \\theta_1 $ o resultado da subtração. Agora o nosso problema está limitado a famosa tabela de ângulos que vai de 30º à 60º. Ao usar a fórmula fornecida na questão - com $ r = 3 $ - chegaremos ao resultado a saber  $$ \\begin{split} -\\cos(60°) = -\\frac{1}{2} \\\\ -\\cos(45°) = -\\frac{\\sqrt{2}}{2} \\end{split} $$"
         },
         {
             "ID": "09",
             "area": "MATEMÁTICA",
-            "text": "",
+            "text": "Simplifique, com a ajuda dos Mapas de Karnaugh, a função cuja expressão em termos canônicos é: $ f(x, y, z) = \\Sigma m(2, 3, 4, 5, 6, 7) $",
             "items": [
-
+                "$ f(X, Y, Z) = X + Y$",
+                "$ f(X, Y, Z) = X + Y + Z$",
+                "$ f(X, Y, Z) = \\overline{X} + Y$",
+                "$ f(X, Y, Z) = XY + Y$",
+                "$ f(X, Y, Z) = X + Y + \\overline{Z}$"
             ],
-            "rightAnswer": 3,
-            "explanation": ""
+            "rightAnswer": 0,
+            "explanation": "Um Mapa de Karnaugh de 3 variáveis possui 8 combinações possíveis. Ao preencher os espaços dados na questão em um Mapa de Karnaugh, veremos que os pontos só são verdadeiros se $ X $ ou $ Y $ forem verdadeiros, ou seja  $$ f(X, Y, Z) = X + Y $$  uma vez que $ Z $ ser verdadeiro não possui nenhum efeito, isso também pode ser visto em uma tabela-verdade."
         },
         {
             "ID": "10",
             "area": "MATEMÁTICA",
-            "text": "",
+            "text": "A função $ g(x) = x^3 - 6x^2 + 9x - 2 $ tem um máximo local estrito no ponto:",
             "items": [
-
+                "$ A(0, -2) $",
+                "$ A(3, -2) $",
+                "$ A(1, 2) $",
+                "$ A(2, 0) $",
+                "$ A(4, 2) $"
             ],
-            "rightAnswer": 3,
-            "explanation": ""
+            "rightAnswer": 2,
+            "explanation": "Precisamos descobrir as raizes de $ g'(x) = 3x^2  -12x + 9 $, o que pode ser feito utilizando-se a fórmula quadrática  $$ \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} $$  Ao substituirmos os valores obteremos  $$ \\frac{12 \\pm 6}{6} $$  O que nos levará às raizes  $$ \\begin{split} x_1 = \\frac{12+6}{6} = \\frac{18}{6} = 3 \\\\ x_2 = \\frac{12 - 6}{6} = \\frac{6}{6} = 1 \\end{split} $$  O ponto é um máximo local12 se $ g''(x) \\leq 0 $, ao utilizarmos $ x = 1 $ obteremos $ g''(1) = -6 $, o que nos mostra que $ x = 1 $ é um máximo local. Para descobrir o valor de $ y $ resolvemos $g(1)$ onde chegaremos ao resultado $ 2 $, portanto o máximo local está em $ A(1, 2) $."
         },
         {
             "ID": "11",
             "area": "MATEMÁTICA",
-            "text": "",
+            "text": "Considere as premissas a seguir verdadeiras: $$ \\begin{split} \\text{Premissa 1: Se Daenerys come churrasco ou João anda a cavalo, então Cersei assiste a um filme.} \\\\ \\text{Premissa 2: Hoje, Cersei não assistiu a um filme.} \\\\ \\text{Premissa 3: Se hoje é domingo, entãoDaenerys come churrasco e Jaime treina esgrima.} \\\\ \\text{Premissa 4: Hoje, Jaime foi treinar esgrima.} \\\\ \\end{split} $$ É correto concluir que:",
             "items": [
-
+                "Hoje é domingo e Daenerys comeu churrasco.",
+                "Hoje não é domingo e Daenerys comeu churrasco.",
+                "Hoje não é domingo e João não andou a cavalo.",
+                "Daenerys comeu churrasco ou João andou a cavalo.",
+                "Hoje é domingo e João andou a cavalo."
             ],
-            "rightAnswer": 3,
-            "explanation": ""
+            "rightAnswer": 2,
+            "explanation": "Na primeira premissa, seja temos que $$ (A \\lor B) \\to C $$ e considerando a segunda premissa vemos que por regra $$ \\neg C \\to \\neg (A \\lor B) $$ Com isso percebemos que João não andou de cavalo e Daenerys não comeu churrasco, o que também implica que hoje não é domingo."
         },
         {
             "ID": "12",
             "area": "MATEMÁTICA",
-            "text": "",
+            "text": "Considere a seguinte proposição: \"Em todos os cursos de Computação, existe, pelo menos, uma disciplina de Lógica\". A negação da proposição exposta é logicamente equivalente à proposição:",
             "items": [
-
+                "Em nenhum curso de Computação, há alguma disciplina de Lógica",
+                "Há, pelo menos, um curso de Computação na qual não há disciplina de Lógica",
+                "Em cada um dos cursos de Computação, não há disciplina de Lógica.",
+                "Não há curso de Computação na qual tenha disciplina de Lógica.",
+                "Há um curso de Computação na qual há, no máximo, uma discipina de Lógica."
             ],
-            "rightAnswer": 3,
-            "explanation": ""
+            "rightAnswer": 1,
+            "explanation": "A negação de uma sentença \"para todos\" ou mais formalmente $ \\forall x $ se torna $ \\exists x $, ou seja, buscamos mostrar que existe pelo menos um $ x $ para o qual isso não é verdade. Com isso a negação da proposição que afirma que em todos os cursos existe a disciplina seria de que há pelo menos um curso onde não há tal disciplina."
         },
         {
             "ID": "13",
             "area": "MATEMÁTICA",
-            "text": "",
+            "text": "Dez pessoas estão participando de um campeonato de xadrez. Na primeira rodada do campeonato, haverá cinco partidas. De quantas maneiras distintas é possível organizar a primeira rodada do campeonato, considerando que não há distinção entre a partida \"competidor A versus competidor B\" e a partida \"competidor B versus competidor A\"?",
             "items": [
-
+                "45",
+                "252",
+                "945",
+                "3840",
+                "113400"
             ],
-            "rightAnswer": 3,
-            "explanation": ""
+            "rightAnswer": 2,
+            "explanation": "Para o primeiro jogador temos $ (n-1)$ possibilidades, já para o segundo temos $(n-3)$, no terceiro teríamos $(n - 5) $ e assim por diante, isso porque para cada escolha excluímos o próprio jogador - afinal ele não pode jogar contra si mesmo - e os jogadores já escolhidos anteriormente, portanto sempre somando 2 à quantidade anterior. A fórmula geral portanto seria  $$ (10 - 1)(10 - 3)(10 - 5)(10 - 7)(10 - 9) =  945$$"
         },
         {
             "ID": "14",
             "area": "MATEMÁTICA",
-            "text": "",
+            "text": "Resolva a identidade $ \\overline{\\overline{C} \\cdot (\\overline{D} + \\overline{E})} $, aplicando, se necessário, as leis de álgebra de Boole.",
             "items": [
-
+                "$ \\overline{C} + (D \\cdot E) $",
+                "$ \\overline{C} + (C + E) $",
+                "$ C + (\\overline{C} \\cdot \\overline{E}) $",
+                "$ \\overline{C} \\cdot (D \\cdot E) $",
+                "$ (C + D) \\cdot (C + E) $"
             ],
-            "rightAnswer": 3,
-            "explanation": ""
+            "rightAnswer": 4,
+            "explanation": "Começando com a Propriedade Distributiva obteremos   $$ \\overline{(\\overline{C} \\cdot \\overline{D}) + (\\overline{C} \\cdot \\overline{E})} $$  Agora aplicando a Lei de Morgan chegaremos em  $$ (C + D) \\cdot (C + E) $$"
         },
         {
             "ID": "15",
             "area": "MATEMÁTICA",
-            "text": "",
+            "text": "A expressão lógica $ \\neg q \\to \\neg p $ é equivalente a:",
             "items": [
-
+                "$ \\neg p \\land \\neg q $",
+                "$ \\neg p \\lor q $",
+                "$ \\neg p \\to q $",
+                "$ p \\to \\neg q $",
+                "$ q \\to p $"
             ],
-            "rightAnswer": 3,
-            "explanation": ""
+            "rightAnswer": 1,
+            "explanation": "Nessa questão iremos trabalhar com Implicação Material, onde teremos que   $$ p \\to q \\iff \\neg p \\lor q $$  Uma vez que a questão nos fornece $ \\neg q \\to \\neg p $ podemos a partir da regra de negação da implicação obter $ p \\to q $, com isso basta observar a equivalência mencionada."
         },
         {
             "ID": "16",
             "area": "MATEMÁTICA",
-            "text": "",
+            "text": "O número hexadecimal BEEF em base 2 é:",
             "items": [
-
+                "1010 1111 1111 1110",
+                "1011 1110 1110 1111",
+                "0010 0011 0011 0100",
+                "1000 0101 0101 0100",
+                "1001 1100 1100 1101"
             ],
-            "rightAnswer": 3,
-            "explanation": ""
+            "rightAnswer": 1,
+            "explanation": "A maneira mais fácil de se resolver essa questão é saber que em hexadecimal para binário $ A = 1010 $, portanto $ B = 1011 $, que nos leva ao item correto por exclusão."
         },
         {
             "ID": "17",
@@ -199,20 +239,28 @@
             "area": "MATEMÁTICA",
             "text": "",
             "items": [
-
+                "$ \\mu = 4,0 $, $ \\sigma = 2,24 $",
+                "$ \\mu = 4,0 $, $ \\sigma = 5,00 $",
+                "$ \\mu = 5,0 $, $ \\sigma = 25,0 $",
+                "$ \\mu = 3,0 $, $ \\sigma = 4,0 $",
+                "$ \\mu = 4,0 $, $ \\sigma = 21,0 $"
             ],
-            "rightAnswer": 3,
-            "explanation": ""
+            "rightAnswer": 0,
+            "explanation": "A questão fornece todas as fórmulas necessárias para resolvê-la, basta utiliza-las para calcular os valores necessários. Temos   $$ \\begin{split} E(X) =  4 \\\\ E(X^2)= 21 \\\\ \\sigma^2 = E(X^2) - \\mu^2 \\\\ =21-16=5 \\end{split} $$  A parte mais difícil que seria calcular $ \\sqrt{5} $ pode ser ignorada ao perceber que o único item na qual $\\mu = 4$ e $\\sigma <5$ é o item A."
         },
         {
             "ID": "19",
             "area": "MATEMÁTICA",
-            "text": "",
+            "text": "De quantas maneiras diferentes é possível formar uma equipe de ginástica olímpica com precisamente 3 ginastas mulheres e 4 ginastas homens, escolhidos a partir de uma delegação com 15 pessoas, das quais 8 são homens e 7 são mulheres?",
             "items": [
-
+                "91",
+                "105",
+                "1960",
+                "2450",
+                "5460"
             ],
             "rightAnswer": 3,
-            "explanation": ""
+            "explanation": "Temos $ 8 \\choose 4 $ formas de escolher 4 ginastas homens e $ 7 \\choose 3 $ formas de escolher 3 ginastas mulheres, portanto a resposta é a multiplicação   $$ {8 \\choose 4} {7 \\choose 3} =  2450$$  Para evitar uma multiplicação longa podem ser eliminados alguns pontos utilizando a fórmula  $$ {n \\choose k} = {n \\choose n - k} $$  que nos levará a  $$ {n \\choose k} = \\frac{n (n-1) \\dots (n - k + 1)}{k!} $$  para o caso onde $ k \\leq n $."
         },
         {
             "ID": "20",

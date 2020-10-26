@@ -11,9 +11,9 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
-        <Route path="/exam/:year" component={Exam} />
-        <Route path="/editor" component={ExamEditor} />
-        <Route path="/">
+        <Route path="/poscomp/exam/:year" component={Exam} />
+        <Route path="/poscomp/editor" component={ExamEditor} />
+        <Route path="/poscomp">
           <Home />
         </Route>
       </Switch>
