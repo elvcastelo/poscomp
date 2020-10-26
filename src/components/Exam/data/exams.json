@@ -260,7 +260,7 @@
                 "5460"
             ],
             "rightAnswer": 3,
-            "explanation": "Temos $ 8 \\choose 4 $ formas de escolher 4 ginastas homens e $ 7 \\choose 3 $ formas de escolher 3 ginastas mulheres, portanto a resposta é a multiplicação   $$ {8 \\choose 4} {7 \\choose 3} =  2450$$  Para evitar uma multiplicação longa podem ser eliminados alguns pontos utilizando a fórmula  $$ {n \\choose k} = {n \\choose n - k} $$  que nos levará a  $$ {n \\choose k} = \\frac{n (n-1) \\dots (n - k + 1)}{k!} $$  para o caso onde $ k \\leq n $."
+            "explanation": "Temos $ 8 \\choose 4 $ formas de escolher 4 ginastas homens e $ 7 \\choose 3 $ formas de escolher 3 ginastas mulheres, portanto a resposta é a multiplicação   $$ {8 \\choose 4} {7 \\choose 3} =  2450$$  Para evitar uma multiplicação longa podem ser eliminados alguns pontos utilizando a fórmula  $$ {n \\choose k} = {n \\choose n - k} $$  que nos levará a  $$ {n \\choose k} = \\frac{n (n-1) \\dots (n - k + 1)}{k!} $$  para o caso onde $ k \\leq \\frac{n}{2} $."
         },
         {
             "ID": "20",
