@@ -13,7 +13,7 @@ function HomeExamList() {
             <p className="home-exams-subtitle">Selecione uma edição do POSCOMP para visualizar as questões resolvidas.</p>
             <div className="home-exams-block-holder">
                 {exams.map(exam => {
-                    return <Link to={`/exam/${exam}`}><ExamBlock year={exam} /></Link>
+                    return <Link to={`/poscomp/exam/${exam}`}><ExamBlock year={exam} /></Link>
                 })}
             </div>
         </div>

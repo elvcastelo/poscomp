@@ -6,8 +6,8 @@ function Navbar() {
     return (
         <nav className="navbar">
           <div className="navbar-logo">SISCOMP</div>
-          <Link to="/">Home</Link>
-          <Link to="/editor">Editor</Link>
+          <Link to="/poscomp">Home</Link>
+          <Link to="/poscomp/editor">Editor</Link>
         </nav>
     )
 }
