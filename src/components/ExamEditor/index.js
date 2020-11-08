@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import MathContext from '../MathContext';
 import Navbar from '../Navbar';
-import examData from '../Exam/data/exams.json';
 import './index.css';
 
 function ExamEditor() {
@@ -16,7 +15,7 @@ function ExamEditor() {
             <div className="exam-editor-holder">
                 <h1 className="exam-editor-title">Editor de Questões</h1>
                 <p className="exam-editor-subtitle">Ferramenta para facilitar a adição e edição de questões.</p>
-                <textarea className="exam-editor-textarea" onChange={(e) => setTextPreview(e.target.value)} defaultValue={textPreview}></textarea>
+                <textarea className="exam-editor-textarea" onChange={e => setTextPreview(e.target.value)} defaultValue={textPreview}></textarea>
                 <div className="exam-editor-preview">
                     <p>Pré-visualização:</p>
                     <MathContext content={String.raw`${textPreview}`} />

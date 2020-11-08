@@ -227,12 +227,16 @@
         {
             "ID": "17",
             "area": "MATEMÁTICA",
-            "text": "",
+            "text": "Uma pessoa deseja fazer uma compra na Internet e, para isso, precisa se cadastrar em um site. A senha de cadastro deve ser formada por exatamente 9 caracteres, e somente os caracteres $, @ e # podem ser usados. Quantas senhas diferentes contendo pelo menos uma ocorrência de cada caractere, existe?",
             "items": [
-
+                "729",
+                "4.374",
+                "18.150",
+                "61.236",
+                "367.416"
             ],
-            "rightAnswer": 3,
-            "explanation": ""
+            "rightAnswer": 2,
+            "explanation": "Utilizaremos o Princípio da Inclusão-Exclusão para 3 variáveis, definido por:  $$ | A  \\cup B \\cup C| = |A|+|B|+|C| - |A \\cap B| - |A \\cap C| - |B \\cap C| + |A \\cup B \\cup C|$$  Sendo $ A $, $ B $ e $ C $ o conjunto de todas as palavras formadas pelos símbolos $\\$$, $@$ e $\\#$ respectivamente. Como a quantidade máxima de palavras formadas por apenas um símbolo é apenas $ 1^9 = 1 $, a quantidade de palavras possíveis com apenas dois símbolos é $ 2^9 $ e a quantidade com todos os símbolos é $ 3^9 $, teremos:  $$ 3 - 2^9 - 2^9 - 2^9 + 3^9 = 18.150 $$"
         },
         {
             "ID": "18",
@@ -265,12 +269,276 @@
         {
             "ID": "20",
             "area": "MATEMÁTICA",
+            "text": "Um avião tem três computadores idênticos, e utiliza-se apenas um para operá-lo, os dois restantes são de reposiçã oque podem se ativar caso o sistema principal falhe. Durante uma hora de operação, a probabilidade de falha do computador principal (ou de qualquer sistema de reposição ativado) é de 0,0005. Supondo que cada hora representa um teste independente, qual é o tempo médio para que ocorram falhas nos três computadores?",
+            "items": [
+                "200 horas",
+                "1.000 horas",
+                "2.000 horas",
+                "3.000 horas",
+                "6.000 horas"
+            ],
+            "rightAnswer": 4,
+            "explanation": "Sabemos que a probabilidade $ p $ de que um dos computadores possua um erro em uma hora é igual a $ p = 0.0005 $, cada hora representa um teste independente e queremos saber a média de horas até que um erro ocorra inicialmente apenas para um dos computadores, portanto estamos interessados em $ E[C_i] $. Utilizaremos a distribuição geométrica cuja fórmula para a média é:  $$ E[X] = \\frac{1}{p} $$  Ao substituirmos o valor $ p $ encontramos o resultado $ E[C_i] = 2000 $. Multiplicando por 3 temos o resultado desejado."
+        },
+        {
+            "ID": "21",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "Nessa questão utilizaremos o Teorema Mestre. Podemos expressar o primeiro algoritmo da seguinte maneira:  $$ T_1(n) = 3T_1(n/4) + O(1) $$  onde a partir disso teremos, seguindo o Teorema Mestre:  $$O(1) = O(n^{\\log_4 3 - \\epsilon})$$  Para $ \\epsilon = \\log_4 3 $ teremos $O(n^0 = 1)$, portanto a complexidade do primeiro algoritmo é $ \\Theta(n^{\\log_4 3}) $. Agora seguimos a mesma lógica com os outros dois algoritmos, escrevendo o segundo como uma função temos:  $$ T_2(n) = 3T_2(n/2) + O(n^2) $$  Uma vez que $ O(n^2) = \\Omega(n^{\\log_2 3 + \\epsilon }) $ ao observarmos que $\\log_2 3 < 2$, então pelo Teorema Mestre a complexidade do segundo algoritmo é de $ \\Theta(n^2) $. É importante ressaltar que nesse item foi ignorado a segunda condição de $ af(n/b) \\leq cf(n) $ para algum $ c < 1 $, mas podemos ver que isso é verdade:  $$ \\begin{split} af(n/b) \\leq cf(n) = \\\\ 3\\Big(\\frac{n}{2}\\Big)^2 \\leq cn^2 = \\\\ \\frac{3n^2}{4} \\leq cn^2 = \\\\ \\frac{3}{4}n^2 \\leq cn^2 \\end{split}$$  Portanto para todo $ 1 > c \\geq \\frac{3}{4} $ a desigualdade será verdadeira. Finalmente para o terceiro algoritmo teremos a função  $$ T_3(n) = 3T_3(n/3) + O(n) $$  Observamos primeiramente que $\\log_3 3 = 1$, portanto $ n^{\\log_3 3} = n $. Com isso teremos que   $$ O(n) = \\Theta(n) $$  Portanto a complexidade do terceiro algoritmo é $ \\Theta(n \\log n) $."
+        },
+        {
+            "ID": "22",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 3,
+            "explanation": "Nessa questão observamos que $ n! $ é assintoticamente maior que as outras duas, a questão portanto é descobrir a relação entre elas. Para $ n = 32 $ - valor escolhido arbitrariamente, um valor $ v \\geq 20 $ pode ser suficientemente grande - teremos para $ h(n) $:  $$ 32^{\\log 32} = 32^5 = 32(32^2)^{2} = 33.554.432 $$  Um método que pode ajudar a realizar essa exponenciação rapidademente é chamado Exponenciação Binária. Para $ f(n) $ nós teremos que calcular  $$ 2^{32} = (2^{2})^{16} = (4^2)^8 = (16^2)^4 =  4.294.967.296 $$  Você pode parar a multiplicação assim que perceber o quão grande será o valor final. Portanto podemos ver que $ h(n) = O(f(n))$ e $ g(n) = \\Omega(f(n)) $, a dizer, $ h(n) $ está limitado acima por $ f(n) $ e $ g(n) $ limitado abaixo por $ f(n) $."
+        },
+        {
+            "ID": "23",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 1,
+            "explanation": "A resposta será dada sendo analisado cada item. O item A está incorreto uma vez que um nó é interno se houver filhos e externo caso não o tenha. O item C está incorreto uma ve que uma árvore é balanceada se a diferença da altura dos nodos é de no máximo 1. O item D está incorreto uma vez que uma árvore binária é dita própria se houver 0 ou 2 filhos. Já o item E está incorreto uma vez que o nodo não pode ser pai e filho ao mesmo tempo. Portanto a resposta correta está no item B."
+        },
+        {
+            "ID": "24",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 2,
+            "explanation": "Um procedimento recursivo é aquele que faz uma ou mais chamadas a si mesmo, como exemplo de algoritmos que fazem uso de recursão podemos citar o famoso algoritmo de ordenação, Merge Sort."
+        },
+        {
+            "ID": "25",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 1,
+            "explanation": "Nessa questão não é obrigatório um conhecimento prévio da linguagem C. Podemos ver que o primeiro loop é realizado $ n $ vezes enquanto o loop interno é realizado $ \\log n $ vezes. Com isso podemos chegar rapidamente na conclusão de que o algoritmo descrito possui complexidade $ \\Theta(n \\log n) $."
+        },
+        {
+            "ID": "26",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 3,
+            "explanation": "O item III está incorreto, uma vez que o conceito \"o último que entra é o primerio que sai\" ou LIFO é utilizado na pilha e não na lista, que por sua vez utiliza FIFO ou \"o primeiro que entra é o primeiro que sai\". Para facilitar a visualização pode-se imaginar a fila como uma fila de banco ou qualquer outro estabelecimento e a pilha como uma pilha de pratos."
+        },
+        {
+            "ID": "27",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "Essa questão envolve apenas seguir o fluxo de repetições. Nesse código não há diferença significativa entre ++k e k++ para nenhuma variável k. Um dos pontos a se observar é que o \"do {} while();\" executa independentemente da expressão em while ainda ser verdadeira, embora este execute-a apenas uma vez nesse caso. Visualizar o código em um debugger online para C pode ajudar a  visualizar o processo para se chegar no resultado final. Algo que também pode ajudar na solução é observar que a variável y nunca é utilizado, portanto, nunca altera o seu valor, existindo apenas dois itens que correspondem a y=1."
+        },
+        {
+            "ID": "28",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "A questão foi anulada. A resposta correta apresentada não o é de fato."
+        },
+        {
+            "ID": "29",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 4,
+            "explanation": "Todos os métodos listados são usados para gerenciamento de espaço livre em disco. No modo de alocação por lista encadeada todos os blocos do disco podem ser usados sem ter nenhum espaço perdido pela fragmentação, esse método também pode utilizar uma tabela na memória o que vai além do escopo da questão."
+        },
+        {
+            "ID": "30",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 3,
+            "explanation": "O item I está incorreto pois uma variável pode sim ser alterada durante a execução do programa. Os outros dois itens de fato, estão corretos, portanto a alternativa correta é a D."
+        },
+        {
+            "ID": "31",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 2,
+            "explanation": "A função soma lida apenas com um tipo de dado, a dizer, valores inteiros, portanto ela é uma função monomórfica."
+        },
+        {
+            "ID": "32",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 3,
+            "explanation": "O item A está errado, um grafo ponderado é um grafo em que são definidos pesos em suas arestas, a definição dada pelo item todavia é a de um grafo completo. O item B está errado, pois este fornece a definição de um grafo ponderado e não a de um grafo completo como mencionado anteriormente. O item C está errado pois um caminho é simples nessa definição. O item E está errado pois o correto é que y é alcançável a partir de x via c."
+        },
+        {
+            "ID": "33",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "Trata-se de uma seleção simples - if - . Uma seleção dupla seria o equivalente a um if-else, todavia o enunciado da questão especifica apenas o fato da condição ser verdadeira. Múltipla escolha seria equivalente ao switch, novamente, não especificado esse caso no enunciado a necessidade de vários casos. A seleção aninhada como o nome sugere trata-se de \"ifs aninhados\", todavia a questão especifica apenas uma condição ser verdadeira para a execução do código. Comando composto não tem relação com condicionais."
+        },
+        {
+            "ID": "34",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "O primeiro item é Falso, uma estrutura baseada em hash pode encontrar o registro com no mínimo 1 acesso, todavia podem haver colisões, onde múltiplos valores podem possuir a mesma chave, o que levaria a realizar uma busca extra pelo valor desejado. O terceiro item também está incorreto porque nem sempre a busca baseada em chave será mais eficiente quando comparado a listas ordenadas."
+        },
+        {
+            "ID": "35",
+            "area":"FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 2,
+            "explanation": "O primeiro item é falso, a tabela de códigos possui tamanho fixo e não está associado a frequência, mas o maior prefixo visto. O segundo item também está errado pois a tabela de símbolos não é incluída no início da mensagem, ela é inicializada e seguimos um processo de descompressão bem parecido com o de compressão, substituindo o código pela string e continuamente acrescentando uma nova sequência de símbolos onde no final obteremos o mesmo dicionário ou tabela que teriamos obtido na compressão."
+        },
+        {
+            "ID": "36",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 2,
+            "explanation": "Trata-se de caminho mais curto com origem única, pois a partir de um grafo G queremos encontrar o menor caminho a partir de um dado vértice de origem. O item A trata-se de um problema oposto ao que queremos, pois esse busca o menor caminho a partir do destino (podemos reduzir esse problema a um problema de origem única). Esse item é o mais provável de causar confusão."
+        },
+        {
+            "ID": "37",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 1,
+            "explanation": "Esse algoritmo é o de Busca em Largura  (Breadth-First Search). Os algoritmos de pré-ordem e pós-ordem são casos especiais do algoritmo de Busca em Profundidade onde a ordem de acesso dos dados do nodo diferem (Depth-First Search), este por sua vez ao invés de realizar uma busca olhando primeiramente todos os elementos a uma distância K, faz uma busca até chegar a uma folha - nodo externo -."
+        },
+        {
+            "ID": "38",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 4,
+            "explanation": "Quando o programa é dividido em módulos para facilitar a organização do código temos o uso da técnica de programação modular. Essa técnica pode ser vista em vários projetos disponíveis no GitHub."
+        },
+        {
+            "ID": "39",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 2,
+            "explanation": "Apenas com um conhecimento de conjuntos é possível resolver essa questão. Se ambas as linguagens são reconhecidas pela Máquina de Turing, como expresso no item I, então segue que a sua união também será, uma vez que contém ambas as linguagens. O item II está incorreto pelo fato de que ao removermos todas as palavras aceitas do alfabeto $ \\sigma^* $ não segue a implicação de possuir palavras que não são aceitas. O item III está correto, uma vez que a interseção de duas linguagens aceitas obviamente também será aceita, pois conterá palavras que já fazia partes de uma linguagem aceita antes."
+        },
+        {
+            "ID": "40",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 4,
+            "explanation": "No item I vemos que se trata de um problema de decisão, que normalmente são associados com problemas NP-Completos, todavia podemos nos aproveitar da relação entre problemas de decisão e otimização para resolver o problema de descobrir a existência de um caminho ao resolver o problema de menor caminho, cuja solução pertencente a classe P existe. No Item II é dado a exata definição da classe de problemas NP-Completos. No item III, sabemos que a classe NP é uma classe de problemas que podem ser verificados em tempo polinomial, como os problemas em P possuem essa propriedade então $ P \\subset NP$, que por sua vez, devido ao fato de P ser fechado em seu complemento, temos que $ P \\subset (NP \\cap coNP ) $."
+        },
+        {
+            "ID": "41",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 1,
+            "explanation": "No item I, uma linguagem é dita regular quando ela é reconhecida pelo autômato, podemos observar que isso é falso pois uma sequência como $ 00 $ ou $ 11 $ não são reconhecidas, portanto é falso. No item III a sequência $ 1000 $ tem um número ímpar de zeros, mas não é reconhecido, logo o item é falso."
+        },
+        {
+            "ID": "42",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "Ao observar o circuito iremos obter a expressão:  $$ \\neg (\\neg ((\\neg A) \\land B) \\lor (B \\land \\neg C)) $$  Onde podemos simplificar as negações para obter  $$ \\begin{split} =\\neg A \\land B \\land (\\neg B \\lor C) \\\\ =\\neg A \\land B \\land C \\end{split} $$  Portanto o item A está correto. Experimentar outra notação pode ajudar na compreensão dos passos."
+        },
+        {
+            "ID": "43",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 3,
+            "explanation": "Sabendo que $ {0020}_{16} $ em hexadecimal corresponde a $ 16^1 \\times 2 = 32 $ em decimal e que $ \\mathrm{00FF}_{16} $ é equivalente na base decimal a $ 16^1 \\times 15 + 16^0 \\times 15 =  255 $ podemos fazer a subtração da quantidade total de endereços, o que corresponde a $ 255 - 32 = 223 $. Ao adicionarmos 1 (porque é inclusivo) teremos portanto $ 224 $."
+        },
+        {
+            "ID": "45",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 4,
+            "explanation": "Cada fork() cria um novo processo, sendo 8 ao todo (os processos continuam a cada loop). Cada processo tem um único thread de controle, portanto ao final temos 8 processos e 8 threads."
+        },
+        {
+            "ID": "46",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
             "text": "",
             "items": [
 
             ],
             "rightAnswer": 3,
             "explanation": ""
+        },
+        {
+            "ID": "50",
+            "area": "FUNDAMENTOS DA COMPUTAÇÃO",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 2,
+            "explanation": "O bloco possui um tamanho de 4096 bytes. No loop, para $ 0 \\leq i < 1024 $ nós vamos escrever para um arquivo um char de 1 byte cada, portanto o arquivo ao final contém 1024 bytes e ocupa 4096 bytes na área de dados do sistema de arquivos, pois esse é o tamanho do seu bloco."
         }
     ],
     "2018": []

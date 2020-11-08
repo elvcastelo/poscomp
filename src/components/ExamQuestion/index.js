@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './index.css';
 import QuestionItem from './QuestionItem';
 import MathContext from '../MathContext';
+import QuestionExplanation from './QuestionExplanation';
 
 function ExamQuestion(props) {
 
@@ -26,9 +27,11 @@ function ExamQuestion(props) {
                         <QuestionItem item={item} key={i} id={i} onClick={checkAnswer} />
                     ))}
                 </div>
+                
+                <QuestionExplanation show={showAnswer} explanation={props.question.explanation} />
 
-                {showAnswer ? <div className="exam-question-explanation"><p className="exam-question-explanation-e">Explicação: </p><MathContext content={props.question.explanation} /></div> : ""}
             </div>
+            <hr className="exam-question-delimiter" />
         </>
     );
 }
