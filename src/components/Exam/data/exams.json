@@ -12,7 +12,10 @@
                 "-87"
             ],
             "rightAnswer": 0,
-            "explanation": "A maneira mais fácil de se chegar na resposta correta é calcular a determinante repetindo as duas primeiras colunas, obtendo portanto a matriz: $$ \\begin{pmatrix}2 & 3 & 5 \\\\ 7 & 11 & 13 \\\\ 17 & 19 & 23 \\end{pmatrix}\\begin{matrix}2 & 3 \\\\ 7 & 11 \\\\ 17 & 19 \\end{matrix} $$ Ao realizarmos a multiplicação das diagonais obteremos a equação $$ \\begin{split}(2 \\times 11 \\times 23) + (3 \\times 13 \\times 17) + (5 \\times 7 \\times 19) \\\\- (5 \\times 11 \\times 17) - (2 \\times 13 \\times 19) - (3 \\times 7 \\times 23)\\end{split} $$ $$ = 506 + 663 + 665 - 935 - 494 - 483 $$ $$ = 1834 - 1912 = -78 $$"
+            "explanation": "A maneira mais fácil de se chegar na resposta correta é calcular a determinante repetindo as duas primeiras colunas [1], obtendo portanto a matriz: $$ \\begin{pmatrix}2 & 3 & 5 \\\\ 7 & 11 & 13 \\\\ 17 & 19 & 23 \\end{pmatrix}\\begin{matrix}2 & 3 \\\\ 7 & 11 \\\\ 17 & 19 \\end{matrix} $$ Ao realizarmos a multiplicação das diagonais obteremos a equação $$ \\begin{split}(2 \\times 11 \\times 23) + (3 \\times 13 \\times 17) + (5 \\times 7 \\times 19) \\\\- (5 \\times 11 \\times 17) - (2 \\times 13 \\times 19) - (3 \\times 7 \\times 23)\\end{split} $$ $$ = 506 + 663 + 665 - 935 - 494 - 483 $$ $$ = 1834 - 1912 = -78 $$",
+            "references": [
+                {"text": "GOUVEIA, Rosimar. Regra de Sarrus", "href": "https://www.todamateria.com.br/regra-de-sarrus/"}
+            ]
         },
         {
             "ID": "02",
@@ -26,7 +29,11 @@
                 "Seriam independentes se o 1º vetor fosse $ (1, 5, 7) $"
             ],
             "rightAnswer": 1,
-            "explanation": "Podemos tentar resolver essa questão visualmente, lembrando que para os vetores $ x_1 $, $ x_2 $ e $ x_3 $ serem independentes temos $$ c_1 x_1 + c_2 x_2 + c_3 x_3 = 0 $$ para algum valor $ c_1 $, $ c_2 $ ou $ c_3 $ diferente de $ 0 $, ou seja, existe uma resolução além da resolução trivial $ c_1 = c_2 = c_3 = 0 $. Todavia como nossa intuição pode estar enganada, o melhor é resolver a equação utilizando-se eliminação, consideremos $$ A = \\begin{pmatrix} 1 & 2 & 1 \\\\ 2 & 5 & 3 \\\\ 3 & 8 & 7 \\end{pmatrix} $$ onde cada coluna é um dos vetores, buscamos então se existe um vetor $ x $ onde $ Ax = 0 $ para $ x \\neq 0 $ (vetor zero). O que irá nos levar às equações: $$ \\begin{split} x_1 + 2x_2 + x_3 = 0 \\\\ 2x_1 + 5x_2 + 3x_3 = 0 \\\\ 3x_1 + 8x_2 + 7x_3 = 0 \\end{split} $$ Ao realizar o processo de Eliminação Gaussiana obteremos: $$ x_1 = - 2x_2 - x_3 \\\\ x_2 = -x_3 \\\\ x_3 = 0 $$ O que nos mostra que a única resolução possível é $ x_1 = x_2 = x_3 = 0 $, logo, os vetores são linearmente independentes."
+            "explanation": "Podemos tentar resolver essa questão visualmente, lembrando que para os vetores $ x_1 $, $ x_2 $ e $ x_3 $ serem independentes temos $$ c_1 x_1 + c_2 x_2 + c_3 x_3 = 0 $$ para algum valor $ c_1 $, $ c_2 $ ou $ c_3 $ diferente de $ 0 $ [1], ou seja, existe uma resolução além da resolução trivial $ c_1 = c_2 = c_3 = 0 $. Todavia como nossa intuição pode estar enganada, o melhor é resolver a equação utilizando-se eliminação, consideremos $$ A = \\begin{pmatrix} 1 & 2 & 1 \\\\ 2 & 5 & 3 \\\\ 3 & 8 & 7 \\end{pmatrix} $$ onde cada coluna é um dos vetores, buscamos então se existe um vetor $ x $ onde $ Ax = 0 $ para $ x \\neq 0 $ (vetor zero). O que irá nos levar às equações: $$ \\begin{split} x_1 + 2x_2 + x_3 = 0 \\\\ 2x_1 + 5x_2 + 3x_3 = 0 \\\\ 3x_1 + 8x_2 + 7x_3 = 0 \\end{split} $$ Ao realizar o processo de Eliminação Gaussiana [2] obteremos: $$ x_1 = - 2x_2 - x_3 \\\\ x_2 = -x_3 \\\\ x_3 = 0 $$ O que nos mostra que a única resolução possível é $ x_1 = x_2 = x_3 = 0 $, logo, os vetores são linearmente independentes.",
+            "references": [
+                {"text": "SANTOS, Marcelo M. Independência Linear", "href": "https://www.ime.unicamp.br/~msantos/Aula_4.pdf"},
+                {"text": "UFRGS. Eliminação Gaussiana", "href": "https://www.ufrgs.br/reamat/CalculoNumerico/livro-sci/sdsl-eliminacao_gaussiana.html"}
+            ]
         },
         {
             "ID": "03",
@@ -40,7 +47,11 @@
                 "$ r: x - 3y + 2 = 0 $"
             ],
             "rightAnswer": 3,
-            "explanation": "Duas linhas são perpendiculares se elas fazem um ângulo reto (90°), se uma linha possui inclinação $ m $ então a segunda linha possui inclinação $ \\frac{-1}{m} $. Se estiver em dúvida de qual a inclinação da reta lembre-se da fórmula de uma reta: $ y = mx + b $. Ao colocarmos a reta na forma descrita anteriormente, teremos $ y = -x + 5 $, logo $ m = -1 $ e o recíproco negativo é $ m_1 = \\frac{-1}{-1} = 1 $ (a variável foi nomeada $ m_1 $ por conveniência), para encontrarmos a reta perpendicular temos então a fórmula: $$ y - y_1 = m_1(x - x_1) $$ Inserindo o ponto na qual a reta deve passar - o ponto $ (3, 4) $ - obtemos $$  y - 4 = x - 3  $$ onde resolvendo para $ y $ temos $$ y = x + 1 $$ colocando na forma dos itens da questão teremos portanto que a resposta é $$ x - y + 1 = 0 $$"
+            "explanation": "Duas linhas são perpendiculares se elas fazem um ângulo reto (90°), se uma linha possui inclinação $ m $ então a segunda linha possui inclinação $ \\frac{-1}{m} $ [1][2]. Se estiver em dúvida de qual a inclinação da reta lembre-se da fórmula de uma reta: $ y = mx + b $. Ao colocarmos a reta na forma descrita anteriormente, teremos $ y = -x + 5 $, logo $ m = -1 $ e o recíproco negativo é $ m_1 = \\frac{-1}{-1} = 1 $ (a variável foi nomeada $ m_1 $ por conveniência), para encontrarmos a reta perpendicular temos então a fórmula: $$ y - y_1 = m_1(x - x_1) $$ Inserindo o ponto na qual a reta deve passar - o ponto $ (3, 4) $ - obtemos $$  y - 4 = x - 3  $$ onde resolvendo para $ y $ temos $$ y = x + 1 $$ colocando na forma dos itens da questão teremos portanto que a resposta é $$ x - y + 1 = 0 $$",
+            "references": [
+                {"text": "DE MIRANDA, Danielle. Retas Perpendiculares", "href": "https://brasilescola.uol.com.br/matematica/retas-perpendiculares.htm"},
+                {"text": "MATH IS FUN. Parallel and Perpendicular Lines", "href": "https://www.mathsisfun.com/algebra/line-parallel-perpendicular.html"}
+            ]
         },
         {
             "ID": "04",
@@ -54,7 +65,10 @@
                 "$ C(\\frac{3}{2}, \\frac{-5}{2}) $"
             ],
             "rightAnswer": 4,
-            "explanation": "Para essa questão iremos primeiramente organizar os termos obtendo portanto $$ (x^2 - 3x) + (y^2 + 5y) = 14 $$ agora, a melhor forma de resolver essa equação é pelo método de completar quadrados onde transformamos equações quadráticas na soma de binomais ao quadrado e um número. O raio da equação de um círculo tem forma $ (x - h)^2 + (y - k)^2 = r^2 $ onde o centro está em $ (h, k) $. Como estamos interessados no centro, descartamos tudo depois da igualdade, caso contrário será mais tempo perdido realizando os cálculos. Multiplicando o segundo termo de cada parênteses por $ \\frac{1}{2} $ teremos $$ h = -3 \\times \\frac{1}{2} = \\frac{-3}{2}$$ e $$ k = 5 \\times \\frac{1}{2} =  \\frac{5}{2} $$ portanto teremos como resultado a equação $ \\Big(x - \\frac{3}{2}\\Big)^2 + \\Big(y + \\frac{5}{2}\\Big)^2 $ o que nos dá o ponto $ C\\Big(\\frac{3}{2}, \\frac{-5}{2}\\Big) $ (lembre-se que os sinais dos pontos estão invertidos na equação)."
+            "explanation": "Para essa questão iremos primeiramente organizar os termos obtendo portanto $$ (x^2 - 3x) + (y^2 + 5y) = 14 $$ agora, a melhor forma de resolver essa equação é pelo método de completar quadrados onde transformamos equações quadráticas na soma de binomais ao quadrado e um número. O raio da equação de um círculo tem forma $ (x - h)^2 + (y - k)^2 = r^2 $ onde o centro está em $ (h, k) $. Como estamos interessados no centro, descartamos tudo depois da igualdade, caso contrário será mais tempo perdido realizando os cálculos. Multiplicando o segundo termo de cada parênteses por $ \\frac{1}{2} $ teremos $$ h = -3 \\times \\frac{1}{2} = \\frac{-3}{2}$$ e $$ k = 5 \\times \\frac{1}{2} =  \\frac{5}{2} $$ portanto teremos como resultado a equação $ \\Big(x - \\frac{3}{2}\\Big)^2 + \\Big(y + \\frac{5}{2}\\Big)^2 $ o que nos dá o ponto $ C\\Big(\\frac{3}{2}, \\frac{-5}{2}\\Big) $ (lembre-se que os sinais dos pontos estão invertidos na equação).",
+            "references": [
+
+            ]
         },
         {
             "ID": "05",
@@ -68,7 +82,10 @@
                 "$ -1 $"
             ],
             "rightAnswer": 2,
-            "explanation": "Podemos perceber que ao substituir $ x $ por 2 teremos uma fração na forma indeterminada $ \\frac{0}{0} $, aplicando a Regra de L'Hôpital calculando a derivada da equação chegamos no cálculo do limite $$ \\lim_{x \\to 2} \\frac{3x^2}{12x - 9x^2} $$ agora substituindo $ x $ por 2 teremos $$ \\frac{12}{-12} = -1 $$"
+            "explanation": "Podemos perceber que ao substituir $ x $ por 2 teremos uma fração na forma indeterminada $ \\frac{0}{0} $, aplicando a Regra de L'Hôpital calculando a derivada da equação chegamos no cálculo do limite $$ \\lim_{x \\to 2} \\frac{3x^2}{12x - 9x^2} $$ agora substituindo $ x $ por 2 teremos $$ \\frac{12}{-12} = -1 $$",
+            "references": [
+
+            ]
         },
         {
             "ID": "06",
@@ -82,7 +99,10 @@
                 "$ a = 2 $ e $ b = 3 $"
             ],
             "rightAnswer": 1,
-            "explanation": "Para uma função ser contínua em um ponto $ n $ temos que pela definição de limites o limite aproximando-se pela esquerda é igual ao limite aproximando-se pela direita, ou seja   $$ \\lim_{x \\to n^-} = \\lim_{x \\to n^+} $$ portanto com $ n = 1 $   vamos ter:   $$ \\begin{split} \\lim_{x \\to 1} x = \\lim_{x \\to 1} ax + b \\\\ 1 = a + b \\end{split} $$   Para $ n = 4 $ iremos seguir a mesma lógica, obtendo  $$ \\begin{split} \\lim_{x \\to 4} ax + b = \\lim_{x \\to 4} -2x \\\\ 4a + b= -8 \\end{split} $$  A resposta para a escolha de $ a $ e $ b $ portanto está na resolução das equações   $$ \\begin{split} a + b = 1 \\\\ 4a + b  = -8 \\end{split} $$  Podemos resolver utilizando a Eliminação Gaussiana, que produzirá o resultado  $$ \\begin{split} a = -3 \\\\ b = 4 \\end{split} $$"
+            "explanation": "Para uma função ser contínua em um ponto $ n $ temos que pela definição de limites o limite aproximando-se pela esquerda é igual ao limite aproximando-se pela direita, ou seja   $$ \\lim_{x \\to n^-} = \\lim_{x \\to n^+} $$ portanto com $ n = 1 $   vamos ter:   $$ \\begin{split} \\lim_{x \\to 1} x = \\lim_{x \\to 1} ax + b \\\\ 1 = a + b \\end{split} $$   Para $ n = 4 $ iremos seguir a mesma lógica, obtendo  $$ \\begin{split} \\lim_{x \\to 4} ax + b = \\lim_{x \\to 4} -2x \\\\ 4a + b= -8 \\end{split} $$  A resposta para a escolha de $ a $ e $ b $ portanto está na resolução das equações   $$ \\begin{split} a + b = 1 \\\\ 4a + b  = -8 \\end{split} $$  Podemos resolver utilizando a Eliminação Gaussiana, que produzirá o resultado  $$ \\begin{split} a = -3 \\\\ b = 4 \\end{split} $$",
+            "references": [
+
+            ]
         },
         {
             "ID": "07",
@@ -96,7 +116,10 @@
                 "$ A^{-1} = \\frac{1}{3} \\begin{pmatrix} 1 & 3 & -3 \\\\ 5 & 3 & 1 \\\\ 1 & 3 & -3 \\end{pmatrix} $"
             ],
             "rightAnswer": 3,
-            "explanation": "Podemos calcular a matriz inversa de $ A $ tendo conhecimento da relação  $$ A^{-1} = \\frac{1}{\\det(A)} adj(A) $$  Onde $ adj(A) $ é a matriz auxiliar, sendo esta a transposta da matriz de cofatores $ C $ - ou seja $ adj(A) = C^T $ - onde   $$ C = \\begin{pmatrix} C_{11} & C_{12}  & C_{13} \\\\ C_{21} & C_{22}  & C_{23} \\\\ C_{31} & C_{32}  & C_{33} \\end{pmatrix} $$  Sendo que $ C_{ij} = (-1)^{i + j} (M_{ij}) $, para $ M_{ij} $ igual a determinante da matriz que resulta ao excluir a linha $ i $ e coluna $ j $. Ao resolver para $ C_{11} = -3 $ vemos que só existe uma opção com esse valor no primeiro ponto de sua diagonal e uma vez que os elementos da diagonal não são alterados pela transposição este portanto é o resultado."
+            "explanation": "Podemos calcular a matriz inversa de $ A $ tendo conhecimento da relação  $$ A^{-1} = \\frac{1}{\\det(A)} adj(A) $$  Onde $ adj(A) $ é a matriz auxiliar, sendo esta a transposta da matriz de cofatores $ C $ - ou seja $ adj(A) = C^T $ - onde   $$ C = \\begin{pmatrix} C_{11} & C_{12}  & C_{13} \\\\ C_{21} & C_{22}  & C_{23} \\\\ C_{31} & C_{32}  & C_{33} \\end{pmatrix} $$  Sendo que $ C_{ij} = (-1)^{i + j} (M_{ij}) $, para $ M_{ij} $ igual a determinante da matriz que resulta ao excluir a linha $ i $ e coluna $ j $. Ao resolver para $ C_{11} = -3 $ vemos que só existe uma opção com esse valor no primeiro ponto de sua diagonal e uma vez que os elementos da diagonal não são alterados pela transposição este portanto é o resultado.",
+            "references": [
+
+            ]
         },
         {
             "ID": "08",
@@ -110,7 +133,10 @@
                 "$ P(\\frac{-1}{2}, \\frac{-3}{2}, \\frac{\\sqrt{2}}{2}) $"
             ],
             "rightAnswer": 0,
-            "explanation": "A maior dificuldade nessa questão é calcular o ângulo, o que podemos resolver facilmente ao lembrar da identidade   $$ \\cos(180°- \\theta_0) = -\\cos(\\theta_1) $$  Onde $ \\theta_0 $ é o ângulo fornecido pela questão e $ \\theta_1 $ o resultado da subtração. Agora o nosso problema está limitado a famosa tabela de ângulos que vai de 30º à 60º. Ao usar a fórmula fornecida na questão - com $ r = 3 $ - chegaremos ao resultado a saber  $$ \\begin{split} -\\cos(60°) = -\\frac{1}{2} \\\\ -\\cos(45°) = -\\frac{\\sqrt{2}}{2} \\end{split} $$"
+            "explanation": "A maior dificuldade nessa questão é calcular o ângulo, o que podemos resolver facilmente ao lembrar da identidade   $$ \\cos(180°- \\theta_0) = -\\cos(\\theta_1) $$  Onde $ \\theta_0 $ é o ângulo fornecido pela questão e $ \\theta_1 $ o resultado da subtração. Agora o nosso problema está limitado a famosa tabela de ângulos que vai de 30º à 60º. Ao usar a fórmula fornecida na questão - com $ r = 3 $ - chegaremos ao resultado a saber  $$ \\begin{split} -\\cos(60°) = -\\frac{1}{2} \\\\ -\\cos(45°) = -\\frac{\\sqrt{2}}{2} \\end{split} $$",
+            "references": [
+
+            ]
         },
         {
             "ID": "09",
@@ -124,7 +150,10 @@
                 "$ f(X, Y, Z) = X + Y + \\overline{Z}$"
             ],
             "rightAnswer": 0,
-            "explanation": "Um Mapa de Karnaugh de 3 variáveis possui 8 combinações possíveis. Ao preencher os espaços dados na questão em um Mapa de Karnaugh, veremos que os pontos só são verdadeiros se $ X $ ou $ Y $ forem verdadeiros, ou seja  $$ f(X, Y, Z) = X + Y $$  uma vez que $ Z $ ser verdadeiro não possui nenhum efeito, isso também pode ser visto em uma tabela-verdade."
+            "explanation": "Um Mapa de Karnaugh de 3 variáveis possui 8 combinações possíveis. Ao preencher os espaços dados na questão em um Mapa de Karnaugh, veremos que os pontos só são verdadeiros se $ X $ ou $ Y $ forem verdadeiros, ou seja  $$ f(X, Y, Z) = X + Y $$  uma vez que $ Z $ ser verdadeiro não possui nenhum efeito, isso também pode ser visto em uma tabela-verdade.",
+            "references": [
+
+            ]
         },
         {
             "ID": "10",
@@ -138,7 +167,10 @@
                 "$ A(4, 2) $"
             ],
             "rightAnswer": 2,
-            "explanation": "Precisamos descobrir as raizes de $ g'(x) = 3x^2  -12x + 9 $, o que pode ser feito utilizando-se a fórmula quadrática  $$ \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} $$  Ao substituirmos os valores obteremos  $$ \\frac{12 \\pm 6}{6} $$  O que nos levará às raizes  $$ \\begin{split} x_1 = \\frac{12+6}{6} = \\frac{18}{6} = 3 \\\\ x_2 = \\frac{12 - 6}{6} = \\frac{6}{6} = 1 \\end{split} $$  O ponto é um máximo local12 se $ g''(x) \\leq 0 $, ao utilizarmos $ x = 1 $ obteremos $ g''(1) = -6 $, o que nos mostra que $ x = 1 $ é um máximo local. Para descobrir o valor de $ y $ resolvemos $g(1)$ onde chegaremos ao resultado $ 2 $, portanto o máximo local está em $ A(1, 2) $."
+            "explanation": "Precisamos descobrir as raizes de $ g'(x) = 3x^2  -12x + 9 $, o que pode ser feito utilizando-se a fórmula quadrática  $$ \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} $$  Ao substituirmos os valores obteremos  $$ \\frac{12 \\pm 6}{6} $$  O que nos levará às raizes  $$ \\begin{split} x_1 = \\frac{12+6}{6} = \\frac{18}{6} = 3 \\\\ x_2 = \\frac{12 - 6}{6} = \\frac{6}{6} = 1 \\end{split} $$  O ponto é um máximo local12 se $ g''(x) \\leq 0 $, ao utilizarmos $ x = 1 $ obteremos $ g''(1) = -6 $, o que nos mostra que $ x = 1 $ é um máximo local. Para descobrir o valor de $ y $ resolvemos $g(1)$ onde chegaremos ao resultado $ 2 $, portanto o máximo local está em $ A(1, 2) $.",
+            "references": [
+
+            ]
         },
         {
             "ID": "11",
@@ -152,7 +184,10 @@
                 "Hoje é domingo e João andou a cavalo."
             ],
             "rightAnswer": 2,
-            "explanation": "Na primeira premissa, seja temos que $$ (A \\lor B) \\to C $$ e considerando a segunda premissa vemos que por regra $$ \\neg C \\to \\neg (A \\lor B) $$ Com isso percebemos que João não andou de cavalo e Daenerys não comeu churrasco, o que também implica que hoje não é domingo."
+            "explanation": "Na primeira premissa, seja temos que $$ (A \\lor B) \\to C $$ e considerando a segunda premissa vemos que por regra $$ \\neg C \\to \\neg (A \\lor B) $$ Com isso percebemos que João não andou de cavalo e Daenerys não comeu churrasco, o que também implica que hoje não é domingo.",
+            "references": [
+
+            ]
         },
         {
             "ID": "12",
@@ -166,7 +201,10 @@
                 "Há um curso de Computação na qual há, no máximo, uma discipina de Lógica."
             ],
             "rightAnswer": 1,
-            "explanation": "A negação de uma sentença \"para todos\" ou mais formalmente $ \\forall x $ se torna $ \\exists x $, ou seja, buscamos mostrar que existe pelo menos um $ x $ para o qual isso não é verdade. Com isso a negação da proposição que afirma que em todos os cursos existe a disciplina seria de que há pelo menos um curso onde não há tal disciplina."
+            "explanation": "A negação de uma sentença \"para todos\" ou mais formalmente $ \\forall x $ se torna $ \\exists x $, ou seja, buscamos mostrar que existe pelo menos um $ x $ para o qual isso não é verdade. Com isso a negação da proposição que afirma que em todos os cursos existe a disciplina seria de que há pelo menos um curso onde não há tal disciplina.",
+            "references": [
+
+            ]
         },
         {
             "ID": "13",
@@ -180,7 +218,10 @@
                 "113400"
             ],
             "rightAnswer": 2,
-            "explanation": "Para o primeiro jogador temos $ (n-1)$ possibilidades, já para o segundo temos $(n-3)$, no terceiro teríamos $(n - 5) $ e assim por diante, isso porque para cada escolha excluímos o próprio jogador - afinal ele não pode jogar contra si mesmo - e os jogadores já escolhidos anteriormente, portanto sempre somando 2 à quantidade anterior. A fórmula geral portanto seria  $$ (10 - 1)(10 - 3)(10 - 5)(10 - 7)(10 - 9) =  945$$"
+            "explanation": "Para o primeiro jogador temos $ (n-1)$ possibilidades, já para o segundo temos $(n-3)$, no terceiro teríamos $(n - 5) $ e assim por diante, isso porque para cada escolha excluímos o próprio jogador - afinal ele não pode jogar contra si mesmo - e os jogadores já escolhidos anteriormente, portanto sempre somando 2 à quantidade anterior. A fórmula geral portanto seria  $$ (10 - 1)(10 - 3)(10 - 5)(10 - 7)(10 - 9) =  945$$",
+            "references": [
+
+            ]
         },
         {
             "ID": "14",
@@ -194,7 +235,10 @@
                 "$ (C + D) \\cdot (C + E) $"
             ],
             "rightAnswer": 4,
-            "explanation": "Começando com a Propriedade Distributiva obteremos   $$ \\overline{(\\overline{C} \\cdot \\overline{D}) + (\\overline{C} \\cdot \\overline{E})} $$  Agora aplicando a Lei de Morgan chegaremos em  $$ (C + D) \\cdot (C + E) $$"
+            "explanation": "Começando com a Propriedade Distributiva obteremos   $$ \\overline{(\\overline{C} \\cdot \\overline{D}) + (\\overline{C} \\cdot \\overline{E})} $$  Agora aplicando a Lei de Morgan chegaremos em  $$ (C + D) \\cdot (C + E) $$",
+            "references": [
+
+            ]
         },
         {
             "ID": "15",
@@ -208,7 +252,10 @@
                 "$ q \\to p $"
             ],
             "rightAnswer": 1,
-            "explanation": "Nessa questão iremos trabalhar com Implicação Material, onde teremos que   $$ p \\to q \\iff \\neg p \\lor q $$  Uma vez que a questão nos fornece $ \\neg q \\to \\neg p $ podemos a partir da regra de negação da implicação obter $ p \\to q $, com isso basta observar a equivalência mencionada."
+            "explanation": "Nessa questão iremos trabalhar com Implicação Material, onde teremos que   $$ p \\to q \\iff \\neg p \\lor q $$  Uma vez que a questão nos fornece $ \\neg q \\to \\neg p $ podemos a partir da regra de negação da implicação obter $ p \\to q $, com isso basta observar a equivalência mencionada.",
+            "references": [
+
+            ]
         },
         {
             "ID": "16",
@@ -222,7 +269,10 @@
                 "1001 1100 1100 1101"
             ],
             "rightAnswer": 1,
-            "explanation": "A maneira mais fácil de se resolver essa questão é saber que em hexadecimal para binário $ A = 1010 $, portanto $ B = 1011 $, que nos leva ao item correto por exclusão."
+            "explanation": "A maneira mais fácil de se resolver essa questão é saber que em hexadecimal para binário $ A = 1010 $, portanto $ B = 1011 $, que nos leva ao item correto por exclusão.",
+            "references": [
+
+            ]
         },
         {
             "ID": "17",
@@ -236,7 +286,10 @@
                 "367.416"
             ],
             "rightAnswer": 2,
-            "explanation": "Utilizaremos o Princípio da Inclusão-Exclusão para 3 variáveis, definido por:  $$ | A  \\cup B \\cup C| = |A|+|B|+|C| - |A \\cap B| - |A \\cap C| - |B \\cap C| + |A \\cup B \\cup C|$$  Sendo $ A $, $ B $ e $ C $ o conjunto de todas as palavras formadas pelos símbolos $\\$$, $@$ e $\\#$ respectivamente. Como a quantidade máxima de palavras formadas por apenas um símbolo é apenas $ 1^9 = 1 $, a quantidade de palavras possíveis com apenas dois símbolos é $ 2^9 $ e a quantidade com todos os símbolos é $ 3^9 $, teremos:  $$ 3 - 2^9 - 2^9 - 2^9 + 3^9 = 18.150 $$"
+            "explanation": "Utilizaremos o Princípio da Inclusão-Exclusão para 3 variáveis, definido por:  $$ | A  \\cup B \\cup C| = |A|+|B|+|C| - |A \\cap B| - |A \\cap C| - |B \\cap C| + |A \\cup B \\cup C|$$  Sendo $ A $, $ B $ e $ C $ o conjunto de todas as palavras formadas pelos símbolos $\\$$, $@$ e $\\#$ respectivamente. Como a quantidade máxima de palavras formadas por apenas um símbolo é apenas $ 1^9 = 1 $, a quantidade de palavras possíveis com apenas dois símbolos é $ 2^9 $ e a quantidade com todos os símbolos é $ 3^9 $, teremos:  $$ 3 - 2^9 - 2^9 - 2^9 + 3^9 = 18.150 $$",
+            "references": [
+
+            ]
         },
         {
             "ID": "18",
@@ -250,7 +303,10 @@
                 "$ \\mu = 4,0 $, $ \\sigma = 21,0 $"
             ],
             "rightAnswer": 0,
-            "explanation": "A questão fornece todas as fórmulas necessárias para resolvê-la, basta utiliza-las para calcular os valores necessários. Temos   $$ \\begin{split} E(X) =  4 \\\\ E(X^2)= 21 \\\\ \\sigma^2 = E(X^2) - \\mu^2 \\\\ =21-16=5 \\end{split} $$  A parte mais difícil que seria calcular $ \\sqrt{5} $ pode ser ignorada ao perceber que o único item na qual $\\mu = 4$ e $\\sigma <5$ é o item A."
+            "explanation": "A questão fornece todas as fórmulas necessárias para resolvê-la, basta utiliza-las para calcular os valores necessários. Temos   $$ \\begin{split} E(X) =  4 \\\\ E(X^2)= 21 \\\\ \\sigma^2 = E(X^2) - \\mu^2 \\\\ =21-16=5 \\end{split} $$  A parte mais difícil que seria calcular $ \\sqrt{5} $ pode ser ignorada ao perceber que o único item na qual $\\mu = 4$ e $\\sigma <5$ é o item A.",
+            "references": [
+
+            ]
         },
         {
             "ID": "19",
@@ -264,7 +320,10 @@
                 "5460"
             ],
             "rightAnswer": 3,
-            "explanation": "Temos $ 8 \\choose 4 $ formas de escolher 4 ginastas homens e $ 7 \\choose 3 $ formas de escolher 3 ginastas mulheres, portanto a resposta é a multiplicação   $$ {8 \\choose 4} {7 \\choose 3} =  2450$$  Para evitar uma multiplicação longa podem ser eliminados alguns pontos utilizando a fórmula  $$ {n \\choose k} = {n \\choose n - k} $$  que nos levará a  $$ {n \\choose k} = \\frac{n (n-1) \\dots (n - k + 1)}{k!} $$  para o caso onde $ k \\leq \\frac{n}{2} $."
+            "explanation": "Temos $ 8 \\choose 4 $ formas de escolher 4 ginastas homens e $ 7 \\choose 3 $ formas de escolher 3 ginastas mulheres, portanto a resposta é a multiplicação   $$ {8 \\choose 4} {7 \\choose 3} =  2450$$  Para evitar uma multiplicação longa podem ser eliminados alguns pontos utilizando a fórmula  $$ {n \\choose k} = {n \\choose n - k} $$  que nos levará a  $$ {n \\choose k} = \\frac{n (n-1) \\dots (n - k + 1)}{k!} $$  para o caso onde $ k \\leq \\frac{n}{2} $.",
+            "references": [
+
+            ]
         },
         {
             "ID": "20",
@@ -278,7 +337,10 @@
                 "6.000 horas"
             ],
             "rightAnswer": 4,
-            "explanation": "Sabemos que a probabilidade $ p $ de que um dos computadores possua um erro em uma hora é igual a $ p = 0.0005 $, cada hora representa um teste independente e queremos saber a média de horas até que um erro ocorra inicialmente apenas para um dos computadores, portanto estamos interessados em $ E[C_i] $. Utilizaremos a distribuição geométrica cuja fórmula para a média é:  $$ E[X] = \\frac{1}{p} $$  Ao substituirmos o valor $ p $ encontramos o resultado $ E[C_i] = 2000 $. Multiplicando por 3 temos o resultado desejado."
+            "explanation": "Sabemos que a probabilidade $ p $ de que um dos computadores possua um erro em uma hora é igual a $ p = 0.0005 $, cada hora representa um teste independente e queremos saber a média de horas até que um erro ocorra inicialmente apenas para um dos computadores, portanto estamos interessados em $ E[C_i] $. Utilizaremos a distribuição geométrica cuja fórmula para a média é:  $$ E[X] = \\frac{1}{p} $$  Ao substituirmos o valor $ p $ encontramos o resultado $ E[C_i] = 2000 $. Multiplicando por 3 temos o resultado desejado.",
+            "references": [
+
+            ]
         },
         {
             "ID": "21",
@@ -288,7 +350,10 @@
 
             ],
             "rightAnswer": 0,
-            "explanation": "Nessa questão utilizaremos o Teorema Mestre. Podemos expressar o primeiro algoritmo da seguinte maneira:  $$ T_1(n) = 3T_1(n/4) + O(1) $$  onde a partir disso teremos, seguindo o Teorema Mestre:  $$O(1) = O(n^{\\log_4 3 - \\epsilon})$$  Para $ \\epsilon = \\log_4 3 $ teremos $O(n^0 = 1)$, portanto a complexidade do primeiro algoritmo é $ \\Theta(n^{\\log_4 3}) $. Agora seguimos a mesma lógica com os outros dois algoritmos, escrevendo o segundo como uma função temos:  $$ T_2(n) = 3T_2(n/2) + O(n^2) $$  Uma vez que $ O(n^2) = \\Omega(n^{\\log_2 3 + \\epsilon }) $ ao observarmos que $\\log_2 3 < 2$, então pelo Teorema Mestre a complexidade do segundo algoritmo é de $ \\Theta(n^2) $. É importante ressaltar que nesse item foi ignorado a segunda condição de $ af(n/b) \\leq cf(n) $ para algum $ c < 1 $, mas podemos ver que isso é verdade:  $$ \\begin{split} af(n/b) \\leq cf(n) = \\\\ 3\\Big(\\frac{n}{2}\\Big)^2 \\leq cn^2 = \\\\ \\frac{3n^2}{4} \\leq cn^2 = \\\\ \\frac{3}{4}n^2 \\leq cn^2 \\end{split}$$  Portanto para todo $ 1 > c \\geq \\frac{3}{4} $ a desigualdade será verdadeira. Finalmente para o terceiro algoritmo teremos a função  $$ T_3(n) = 3T_3(n/3) + O(n) $$  Observamos primeiramente que $\\log_3 3 = 1$, portanto $ n^{\\log_3 3} = n $. Com isso teremos que   $$ O(n) = \\Theta(n) $$  Portanto a complexidade do terceiro algoritmo é $ \\Theta(n \\log n) $."
+            "explanation": "Nessa questão utilizaremos o Teorema Mestre. Podemos expressar o primeiro algoritmo da seguinte maneira:  $$ T_1(n) = 3T_1(n/4) + O(1) $$  onde a partir disso teremos, seguindo o Teorema Mestre:  $$O(1) = O(n^{\\log_4 3 - \\epsilon})$$  Para $ \\epsilon = \\log_4 3 $ teremos $O(n^0 = 1)$, portanto a complexidade do primeiro algoritmo é $ \\Theta(n^{\\log_4 3}) $. Agora seguimos a mesma lógica com os outros dois algoritmos, escrevendo o segundo como uma função temos:  $$ T_2(n) = 3T_2(n/2) + O(n^2) $$  Uma vez que $ O(n^2) = \\Omega(n^{\\log_2 3 + \\epsilon }) $ ao observarmos que $\\log_2 3 < 2$, então pelo Teorema Mestre a complexidade do segundo algoritmo é de $ \\Theta(n^2) $. É importante ressaltar que nesse item foi ignorado a segunda condição de $ af(n/b) \\leq cf(n) $ para algum $ c < 1 $, mas podemos ver que isso é verdade:  $$ \\begin{split} af(n/b) \\leq cf(n) = \\\\ 3\\Big(\\frac{n}{2}\\Big)^2 \\leq cn^2 = \\\\ \\frac{3n^2}{4} \\leq cn^2 = \\\\ \\frac{3}{4}n^2 \\leq cn^2 \\end{split}$$  Portanto para todo $ 1 > c \\geq \\frac{3}{4} $ a desigualdade será verdadeira. Finalmente para o terceiro algoritmo teremos a função  $$ T_3(n) = 3T_3(n/3) + O(n) $$  Observamos primeiramente que $\\log_3 3 = 1$, portanto $ n^{\\log_3 3} = n $. Com isso teremos que   $$ O(n) = \\Theta(n) $$  Portanto a complexidade do terceiro algoritmo é $ \\Theta(n \\log n) $.",
+            "references": [
+
+            ]
         },
         {
             "ID": "22",
@@ -298,7 +363,10 @@
 
             ],
             "rightAnswer": 3,
-            "explanation": "Nessa questão observamos que $ n! $ é assintoticamente maior que as outras duas, a questão portanto é descobrir a relação entre elas. Para $ n = 32 $ - valor escolhido arbitrariamente, um valor $ v \\geq 20 $ pode ser suficientemente grande - teremos para $ h(n) $:  $$ 32^{\\log 32} = 32^5 = 32(32^2)^{2} = 33.554.432 $$  Um método que pode ajudar a realizar essa exponenciação rapidademente é chamado Exponenciação Binária. Para $ f(n) $ nós teremos que calcular  $$ 2^{32} = (2^{2})^{16} = (4^2)^8 = (16^2)^4 =  4.294.967.296 $$  Você pode parar a multiplicação assim que perceber o quão grande será o valor final. Portanto podemos ver que $ h(n) = O(f(n))$ e $ g(n) = \\Omega(f(n)) $, a dizer, $ h(n) $ está limitado acima por $ f(n) $ e $ g(n) $ limitado abaixo por $ f(n) $."
+            "explanation": "Nessa questão observamos que $ n! $ é assintoticamente maior que as outras duas, a questão portanto é descobrir a relação entre elas. Para $ n = 32 $ - valor escolhido arbitrariamente, um valor $ v \\geq 20 $ pode ser suficientemente grande - teremos para $ h(n) $:  $$ 32^{\\log 32} = 32^5 = 32(32^2)^{2} = 33.554.432 $$  Um método que pode ajudar a realizar essa exponenciação rapidademente é chamado Exponenciação Binária. Para $ f(n) $ nós teremos que calcular  $$ 2^{32} = (2^{2})^{16} = (4^2)^8 = (16^2)^4 =  4.294.967.296 $$  Você pode parar a multiplicação assim que perceber o quão grande será o valor final. Portanto podemos ver que $ h(n) = O(f(n))$ e $ g(n) = \\Omega(f(n)) $, a dizer, $ h(n) $ está limitado acima por $ f(n) $ e $ g(n) $ limitado abaixo por $ f(n) $.",
+            "references": [
+
+            ]
         },
         {
             "ID": "23",
@@ -308,7 +376,10 @@
 
             ],
             "rightAnswer": 1,
-            "explanation": "A resposta será dada sendo analisado cada item. O item A está incorreto uma vez que um nó é interno se houver filhos e externo caso não o tenha. O item C está incorreto uma ve que uma árvore é balanceada se a diferença da altura dos nodos é de no máximo 1. O item D está incorreto uma vez que uma árvore binária é dita própria se houver 0 ou 2 filhos. Já o item E está incorreto uma vez que o nodo não pode ser pai e filho ao mesmo tempo. Portanto a resposta correta está no item B."
+            "explanation": "A resposta será dada sendo analisado cada item. O item A está incorreto uma vez que um nó é interno se houver filhos e externo caso não o tenha. O item C está incorreto uma ve que uma árvore é balanceada se a diferença da altura dos nodos é de no máximo 1. O item D está incorreto uma vez que uma árvore binária é dita própria se houver 0 ou 2 filhos. Já o item E está incorreto uma vez que o nodo não pode ser pai e filho ao mesmo tempo. Portanto a resposta correta está no item B.",
+            "references": [
+
+            ]
         },
         {
             "ID": "24",
@@ -318,7 +389,10 @@
 
             ],
             "rightAnswer": 2,
-            "explanation": "Um procedimento recursivo é aquele que faz uma ou mais chamadas a si mesmo, como exemplo de algoritmos que fazem uso de recursão podemos citar o famoso algoritmo de ordenação, Merge Sort."
+            "explanation": "Um procedimento recursivo é aquele que faz uma ou mais chamadas a si mesmo, como exemplo de algoritmos que fazem uso de recursão podemos citar o famoso algoritmo de ordenação, Merge Sort.",
+            "references": [
+
+            ]
         },
         {
             "ID": "25",
@@ -328,7 +402,10 @@
 
             ],
             "rightAnswer": 1,
-            "explanation": "Nessa questão não é obrigatório um conhecimento prévio da linguagem C. Podemos ver que o primeiro loop é realizado $ n $ vezes enquanto o loop interno é realizado $ \\log n $ vezes. Com isso podemos chegar rapidamente na conclusão de que o algoritmo descrito possui complexidade $ \\Theta(n \\log n) $."
+            "explanation": "Nessa questão não é obrigatório um conhecimento prévio da linguagem C. Podemos ver que o primeiro loop é realizado $ n $ vezes enquanto o loop interno é realizado $ \\log n $ vezes. Com isso podemos chegar rapidamente na conclusão de que o algoritmo descrito possui complexidade $ \\Theta(n \\log n) $.",
+            "references": [
+
+            ]
         },
         {
             "ID": "26",
@@ -338,7 +415,10 @@
 
             ],
             "rightAnswer": 3,
-            "explanation": "O item III está incorreto, uma vez que o conceito \"o último que entra é o primerio que sai\" ou LIFO é utilizado na pilha e não na lista, que por sua vez utiliza FIFO ou \"o primeiro que entra é o primeiro que sai\". Para facilitar a visualização pode-se imaginar a fila como uma fila de banco ou qualquer outro estabelecimento e a pilha como uma pilha de pratos."
+            "explanation": "O item III está incorreto, uma vez que o conceito \"o último que entra é o primerio que sai\" ou LIFO é utilizado na pilha e não na lista, que por sua vez utiliza FIFO ou \"o primeiro que entra é o primeiro que sai\". Para facilitar a visualização pode-se imaginar a fila como uma fila de banco ou qualquer outro estabelecimento e a pilha como uma pilha de pratos.",
+            "references": [
+
+            ]
         },
         {
             "ID": "27",
@@ -348,7 +428,10 @@
 
             ],
             "rightAnswer": 0,
-            "explanation": "Essa questão envolve apenas seguir o fluxo de repetições. Nesse código não há diferença significativa entre ++k e k++ para nenhuma variável k. Um dos pontos a se observar é que o \"do {} while();\" executa independentemente da expressão em while ainda ser verdadeira, embora este execute-a apenas uma vez nesse caso. Visualizar o código em um debugger online para C pode ajudar a  visualizar o processo para se chegar no resultado final. Algo que também pode ajudar na solução é observar que a variável y nunca é utilizado, portanto, nunca altera o seu valor, existindo apenas dois itens que correspondem a y=1."
+            "explanation": "Essa questão envolve apenas seguir o fluxo de repetições. Nesse código não há diferença significativa entre ++k e k++ para nenhuma variável k. Um dos pontos a se observar é que o \"do {} while();\" executa independentemente da expressão em while ainda ser verdadeira, embora este execute-a apenas uma vez nesse caso. Visualizar o código em um debugger online para C pode ajudar a  visualizar o processo para se chegar no resultado final. Algo que também pode ajudar na solução é observar que a variável y nunca é utilizado, portanto, nunca altera o seu valor, existindo apenas dois itens que correspondem a y=1.",
+                "references": [
+
+                ]
         },
         {
             "ID": "28",
@@ -358,7 +441,10 @@
 
             ],
             "rightAnswer": 0,
-            "explanation": "A questão foi anulada. A resposta correta apresentada não o é de fato."
+            "explanation": "A questão foi anulada. A resposta correta apresentada não o é de fato.",
+            "references": [
+
+            ]
         },
         {
             "ID": "29",
@@ -368,7 +454,10 @@
 
             ],
             "rightAnswer": 4,
-            "explanation": "Todos os métodos listados são usados para gerenciamento de espaço livre em disco. No modo de alocação por lista encadeada todos os blocos do disco podem ser usados sem ter nenhum espaço perdido pela fragmentação, esse método também pode utilizar uma tabela na memória o que vai além do escopo da questão."
+            "explanation": "Todos os métodos listados são usados para gerenciamento de espaço livre em disco. No modo de alocação por lista encadeada todos os blocos do disco podem ser usados sem ter nenhum espaço perdido pela fragmentação, esse método também pode utilizar uma tabela na memória o que vai além do escopo da questão.",
+            "references": [
+
+            ]
         },
         {
             "ID": "30",
@@ -378,7 +467,10 @@
 
             ],
             "rightAnswer": 3,
-            "explanation": "O item I está incorreto pois uma variável pode sim ser alterada durante a execução do programa. Os outros dois itens de fato, estão corretos, portanto a alternativa correta é a D."
+            "explanation": "O item I está incorreto pois uma variável pode sim ser alterada durante a execução do programa. Os outros dois itens de fato, estão corretos, portanto a alternativa correta é a D.",
+            "references": [
+
+            ]
         },
         {
             "ID": "31",
@@ -388,7 +480,10 @@
 
             ],
             "rightAnswer": 2,
-            "explanation": "A função soma lida apenas com um tipo de dado, a dizer, valores inteiros, portanto ela é uma função monomórfica."
+            "explanation": "A função soma lida apenas com um tipo de dado, a dizer, valores inteiros, portanto ela é uma função monomórfica.",
+            "references": [
+
+            ]
         },
         {
             "ID": "32",
@@ -398,7 +493,10 @@
 
             ],
             "rightAnswer": 3,
-            "explanation": "O item A está errado, um grafo ponderado é um grafo em que são definidos pesos em suas arestas, a definição dada pelo item todavia é a de um grafo completo. O item B está errado, pois este fornece a definição de um grafo ponderado e não a de um grafo completo como mencionado anteriormente. O item C está errado pois um caminho é simples nessa definição. O item E está errado pois o correto é que y é alcançável a partir de x via c."
+            "explanation": "O item A está errado, um grafo ponderado é um grafo em que são definidos pesos em suas arestas, a definição dada pelo item todavia é a de um grafo completo. O item B está errado, pois este fornece a definição de um grafo ponderado e não a de um grafo completo como mencionado anteriormente. O item C está errado pois um caminho é simples nessa definição. O item E está errado pois o correto é que y é alcançável a partir de x via c.",
+            "references": [
+
+            ]
         },
         {
             "ID": "33",
@@ -408,7 +506,10 @@
 
             ],
             "rightAnswer": 0,
-            "explanation": "Trata-se de uma seleção simples - if - . Uma seleção dupla seria o equivalente a um if-else, todavia o enunciado da questão especifica apenas o fato da condição ser verdadeira. Múltipla escolha seria equivalente ao switch, novamente, não especificado esse caso no enunciado a necessidade de vários casos. A seleção aninhada como o nome sugere trata-se de \"ifs aninhados\", todavia a questão especifica apenas uma condição ser verdadeira para a execução do código. Comando composto não tem relação com condicionais."
+            "explanation": "Trata-se de uma seleção simples - if - . Uma seleção dupla seria o equivalente a um if-else, todavia o enunciado da questão especifica apenas o fato da condição ser verdadeira. Múltipla escolha seria equivalente ao switch, novamente, não especificado esse caso no enunciado a necessidade de vários casos. A seleção aninhada como o nome sugere trata-se de \"ifs aninhados\", todavia a questão especifica apenas uma condição ser verdadeira para a execução do código. Comando composto não tem relação com condicionais.",
+            "references": [
+
+            ]
         },
         {
             "ID": "34",
@@ -418,7 +519,10 @@
 
             ],
             "rightAnswer": 0,
-            "explanation": "O primeiro item é Falso, uma estrutura baseada em hash pode encontrar o registro com no mínimo 1 acesso, todavia podem haver colisões, onde múltiplos valores podem possuir a mesma chave, o que levaria a realizar uma busca extra pelo valor desejado. O terceiro item também está incorreto porque nem sempre a busca baseada em chave será mais eficiente quando comparado a listas ordenadas."
+            "explanation": "O primeiro item é Falso, uma estrutura baseada em hash pode encontrar o registro com no mínimo 1 acesso, todavia podem haver colisões, onde múltiplos valores podem possuir a mesma chave, o que levaria a realizar uma busca extra pelo valor desejado. O terceiro item também está incorreto porque nem sempre a busca baseada em chave será mais eficiente quando comparado a listas ordenadas.",
+            "references": [
+
+            ]
         },
         {
             "ID": "35",
@@ -428,7 +532,10 @@
 
             ],
             "rightAnswer": 2,
-            "explanation": "O primeiro item é falso, a tabela de códigos possui tamanho fixo e não está associado a frequência, mas o maior prefixo visto. O segundo item também está errado pois a tabela de símbolos não é incluída no início da mensagem, ela é inicializada e seguimos um processo de descompressão bem parecido com o de compressão, substituindo o código pela string e continuamente acrescentando uma nova sequência de símbolos onde no final obteremos o mesmo dicionário ou tabela que teriamos obtido na compressão."
+            "explanation": "O primeiro item é falso, a tabela de códigos possui tamanho fixo e não está associado a frequência, mas o maior prefixo visto. O segundo item também está errado pois a tabela de símbolos não é incluída no início da mensagem, ela é inicializada e seguimos um processo de descompressão bem parecido com o de compressão, substituindo o código pela string e continuamente acrescentando uma nova sequência de símbolos onde no final obteremos o mesmo dicionário ou tabela que teriamos obtido na compressão.",
+            "references": [
+
+            ]
         },
         {
             "ID": "36",
@@ -438,7 +545,10 @@
 
             ],
             "rightAnswer": 2,
-            "explanation": "Trata-se de caminho mais curto com origem única, pois a partir de um grafo G queremos encontrar o menor caminho a partir de um dado vértice de origem. O item A trata-se de um problema oposto ao que queremos, pois esse busca o menor caminho a partir do destino (podemos reduzir esse problema a um problema de origem única). Esse item é o mais provável de causar confusão."
+            "explanation": "Trata-se de caminho mais curto com origem única, pois a partir de um grafo G queremos encontrar o menor caminho a partir de um dado vértice de origem. O item A trata-se de um problema oposto ao que queremos, pois esse busca o menor caminho a partir do destino (podemos reduzir esse problema a um problema de origem única). Esse item é o mais provável de causar confusão.",
+            "references": [
+
+            ]
         },
         {
             "ID": "37",
@@ -448,7 +558,10 @@
 
             ],
             "rightAnswer": 1,
-            "explanation": "Esse algoritmo é o de Busca em Largura  (Breadth-First Search). Os algoritmos de pré-ordem e pós-ordem são casos especiais do algoritmo de Busca em Profundidade onde a ordem de acesso dos dados do nodo diferem (Depth-First Search), este por sua vez ao invés de realizar uma busca olhando primeiramente todos os elementos a uma distância K, faz uma busca até chegar a uma folha - nodo externo -."
+            "explanation": "Esse algoritmo é o de Busca em Largura  (Breadth-First Search). Os algoritmos de pré-ordem e pós-ordem são casos especiais do algoritmo de Busca em Profundidade onde a ordem de acesso dos dados do nodo diferem (Depth-First Search), este por sua vez ao invés de realizar uma busca olhando primeiramente todos os elementos a uma distância K, faz uma busca até chegar a uma folha - nodo externo -.",
+            "references": [
+
+            ]
         },
         {
             "ID": "38",
@@ -458,7 +571,10 @@
 
             ],
             "rightAnswer": 4,
-            "explanation": "Quando o programa é dividido em módulos para facilitar a organização do código temos o uso da técnica de programação modular. Essa técnica pode ser vista em vários projetos disponíveis no GitHub."
+            "explanation": "Quando o programa é dividido em módulos para facilitar a organização do código temos o uso da técnica de programação modular. Essa técnica pode ser vista em vários projetos disponíveis no GitHub.",
+            "references": [
+
+            ]
         },
         {
             "ID": "39",
@@ -468,7 +584,10 @@
 
             ],
             "rightAnswer": 2,
-            "explanation": "Apenas com um conhecimento de conjuntos é possível resolver essa questão. Se ambas as linguagens são reconhecidas pela Máquina de Turing, como expresso no item I, então segue que a sua união também será, uma vez que contém ambas as linguagens. O item II está incorreto pelo fato de que ao removermos todas as palavras aceitas do alfabeto $ \\sigma^* $ não segue a implicação de possuir palavras que não são aceitas. O item III está correto, uma vez que a interseção de duas linguagens aceitas obviamente também será aceita, pois conterá palavras que já fazia partes de uma linguagem aceita antes."
+            "explanation": "Apenas com um conhecimento de conjuntos é possível resolver essa questão. Se ambas as linguagens são reconhecidas pela Máquina de Turing, como expresso no item I, então segue que a sua união também será, uma vez que contém ambas as linguagens. O item II está incorreto pelo fato de que ao removermos todas as palavras aceitas do alfabeto $ \\sigma^* $ não segue a implicação de possuir palavras que não são aceitas. O item III está correto, uma vez que a interseção de duas linguagens aceitas obviamente também será aceita, pois conterá palavras que já fazia partes de uma linguagem aceita antes.",
+            "references": [
+
+            ]
         },
         {
             "ID": "40",
@@ -478,7 +597,10 @@
 
             ],
             "rightAnswer": 4,
-            "explanation": "No item I vemos que se trata de um problema de decisão, que normalmente são associados com problemas NP-Completos, todavia podemos nos aproveitar da relação entre problemas de decisão e otimização para resolver o problema de descobrir a existência de um caminho ao resolver o problema de menor caminho, cuja solução pertencente a classe P existe. No Item II é dado a exata definição da classe de problemas NP-Completos. No item III, sabemos que a classe NP é uma classe de problemas que podem ser verificados em tempo polinomial, como os problemas em P possuem essa propriedade então $ P \\subset NP$, que por sua vez, devido ao fato de P ser fechado em seu complemento, temos que $ P \\subset (NP \\cap coNP ) $."
+            "explanation": "No item I vemos que se trata de um problema de decisão, que normalmente são associados com problemas NP-Completos, todavia podemos nos aproveitar da relação entre problemas de decisão e otimização para resolver o problema de descobrir a existência de um caminho ao resolver o problema de menor caminho, cuja solução pertencente a classe P existe. No Item II é dado a exata definição da classe de problemas NP-Completos. No item III, sabemos que a classe NP é uma classe de problemas que podem ser verificados em tempo polinomial, como os problemas em P possuem essa propriedade então $ P \\subset NP$, que por sua vez, devido ao fato de P ser fechado em seu complemento, temos que $ P \\subset (NP \\cap coNP ) $.",
+            "references": [
+
+            ]
         },
         {
             "ID": "41",
@@ -488,7 +610,10 @@
 
             ],
             "rightAnswer": 1,
-            "explanation": "No item I, uma linguagem é dita regular quando ela é reconhecida pelo autômato, podemos observar que isso é falso pois uma sequência como $ 00 $ ou $ 11 $ não são reconhecidas, portanto é falso. No item III a sequência $ 1000 $ tem um número ímpar de zeros, mas não é reconhecido, logo o item é falso."
+            "explanation": "No item I, uma linguagem é dita regular quando ela é reconhecida pelo autômato, podemos observar que isso é falso pois uma sequência como $ 00 $ ou $ 11 $ não são reconhecidas, portanto é falso. No item III a sequência $ 1000 $ tem um número ímpar de zeros, mas não é reconhecido, logo o item é falso.",
+            "references": [
+
+            ]
         },
         {
             "ID": "42",
@@ -498,7 +623,10 @@
 
             ],
             "rightAnswer": 0,
-            "explanation": "Ao observar o circuito iremos obter a expressão:  $$ \\neg (\\neg ((\\neg A) \\land B) \\lor (B \\land \\neg C)) $$  Onde podemos simplificar as negações para obter  $$ \\begin{split} =\\neg A \\land B \\land (\\neg B \\lor C) \\\\ =\\neg A \\land B \\land C \\end{split} $$  Portanto o item A está correto. Experimentar outra notação pode ajudar na compreensão dos passos."
+            "explanation": "Ao observar o circuito iremos obter a expressão:  $$ \\neg (\\neg ((\\neg A) \\land B) \\lor (B \\land \\neg C)) $$  Onde podemos simplificar as negações para obter  $$ \\begin{split} =\\neg A \\land B \\land (\\neg B \\lor C) \\\\ =\\neg A \\land B \\land C \\end{split} $$  Portanto o item A está correto. Experimentar outra notação pode ajudar na compreensão dos passos.",
+            "references": [
+
+            ]
         },
         {
             "ID": "43",
@@ -508,7 +636,10 @@
 
             ],
             "rightAnswer": 3,
-            "explanation": "Sabendo que $ {0020}_{16} $ em hexadecimal corresponde a $ 16^1 \\times 2 = 32 $ em decimal e que $ \\mathrm{00FF}_{16} $ é equivalente na base decimal a $ 16^1 \\times 15 + 16^0 \\times 15 =  255 $ podemos fazer a subtração da quantidade total de endereços, o que corresponde a $ 255 - 32 = 223 $. Ao adicionarmos 1 (porque é inclusivo) teremos portanto $ 224 $."
+            "explanation": "Sabendo que $ {0020}_{16} $ em hexadecimal corresponde a $ 16^1 \\times 2 = 32 $ em decimal e que $ \\mathrm{00FF}_{16} $ é equivalente na base decimal a $ 16^1 \\times 15 + 16^0 \\times 15 =  255 $ podemos fazer a subtração da quantidade total de endereços, o que corresponde a $ 255 - 32 = 223 $. Ao adicionarmos 1 (porque é inclusivo) teremos portanto $ 224 $.",
+            "references": [
+
+            ]
         },
         {
             "ID": "45",
@@ -518,7 +649,10 @@
 
             ],
             "rightAnswer": 4,
-            "explanation": "Cada fork() cria um novo processo, sendo 8 ao todo (os processos continuam a cada loop). Cada processo tem um único thread de controle, portanto ao final temos 8 processos e 8 threads."
+            "explanation": "Cada fork() cria um novo processo, sendo 8 ao todo (os processos continuam a cada loop). Cada processo tem um único thread de controle, portanto ao final temos 8 processos e 8 threads.",
+            "references": [
+
+            ]
         },
         {
             "ID": "46",
@@ -528,7 +662,10 @@
 
             ],
             "rightAnswer": 3,
-            "explanation": ""
+            "explanation": "",
+            "references": [
+
+            ]
         },
         {
             "ID": "50",
@@ -541,5 +678,18 @@
             "explanation": "O bloco possui um tamanho de 4096 bytes. No loop, para $ 0 \\leq i < 1024 $ nós vamos escrever para um arquivo um char de 1 byte cada, portanto o arquivo ao final contém 1024 bytes e ocupa 4096 bytes na área de dados do sistema de arquivos, pois esse é o tamanho do seu bloco."
         }
     ],
-    "2018": []
+    "2018": [
+        {
+            "ID": "01",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "",
+            "references": [
+            ]
+        }
+    ]
 }

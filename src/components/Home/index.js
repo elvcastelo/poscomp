@@ -5,14 +5,14 @@ import HomeTutorial from '../HomeTutorial';
 import Navbar from '../Navbar';
 
 function Home() {
-    return (
-        <>
-            <Navbar />
-            <HomeBanner />
-            <HomeExamList />
-            <HomeTutorial />
-        </>
-    );
+  return (
+    <>
+      <Navbar />
+      <HomeBanner />
+      <HomeExamList />
+      <HomeTutorial />
+    </>
+  );
 }
 
 export default Home;
