@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/poscomp/static/css/main.0345a924.chunk.css",
-    "main.js": "/poscomp/static/js/main.4914e511.chunk.js",
-    "main.js.map": "/poscomp/static/js/main.4914e511.chunk.js.map",
+    "main.css": "/poscomp/static/css/main.e38ce25f.chunk.css",
+    "main.js": "/poscomp/static/js/main.8d4c3c74.chunk.js",
+    "main.js.map": "/poscomp/static/js/main.8d4c3c74.chunk.js.map",
     "runtime-main.js": "/poscomp/static/js/runtime-main.4f313254.js",
     "runtime-main.js.map": "/poscomp/static/js/runtime-main.4f313254.js.map",
-    "static/js/2.b685dd5b.chunk.js": "/poscomp/static/js/2.b685dd5b.chunk.js",
-    "static/js/2.b685dd5b.chunk.js.map": "/poscomp/static/js/2.b685dd5b.chunk.js.map",
+    "static/js/2.2b01b215.chunk.js": "/poscomp/static/js/2.2b01b215.chunk.js",
+    "static/js/2.2b01b215.chunk.js.map": "/poscomp/static/js/2.2b01b215.chunk.js.map",
     "index.html": "/poscomp/index.html",
-    "static/css/main.0345a924.chunk.css.map": "/poscomp/static/css/main.0345a924.chunk.css.map",
-    "static/js/2.b685dd5b.chunk.js.LICENSE.txt": "/poscomp/static/js/2.b685dd5b.chunk.js.LICENSE.txt"
+    "static/css/main.e38ce25f.chunk.css.map": "/poscomp/static/css/main.e38ce25f.chunk.css.map",
+    "static/js/2.2b01b215.chunk.js.LICENSE.txt": "/poscomp/static/js/2.2b01b215.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4f313254.js",
-    "static/js/2.b685dd5b.chunk.js",
-    "static/css/main.0345a924.chunk.css",
-    "static/js/main.4914e511.chunk.js"
+    "static/js/2.2b01b215.chunk.js",
+    "static/css/main.e38ce25f.chunk.css",
+    "static/js/main.8d4c3c74.chunk.js"
   ]
 }
