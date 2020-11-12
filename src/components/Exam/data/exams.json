@@ -20,7 +20,7 @@
         {
             "ID": "02",
             "area": "MATEMÁTICA",
-            "text": "Seja $ \\mathbb{R}^3 $. Os vetores $ \\{(1, 2, 3), (2, 5, 8), (1, 3, 7)\\} $ são independentes?",
+            "text": "Seja $ E = \\mathbb{R}^3 $. Os vetores $ \\{(1, 2, 3), (2, 5, 8), (1, 3, 7)\\} $ são independentes?",
             "items": [
                 "Não",
                 "Sim",
@@ -679,6 +679,278 @@
         }
     ],
     "2018": [
+        {
+            "ID": "01",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 3,
+            "explanation": "Uma matriz $ A $ é dita ser diagonalizável se $ A = PDP^{-1} $, o que exposto de outra maneira significa que essa matriz $ n \\times n $ possui $ n $ autovetores linearmente independentes [1]. Para calcular os autovetores de $ A $ precisamos primeiramente calcular os seus autovalores através da fórmula $ \\det (A - \\lambda I) $. Dado o tamanho da matriz, podemos simplificar utilizando a expansão de Laplace [2][3] selecionando as linhas ou colunas com maior número de zeros. $$ \\begin{split} 3 \\times \\begin{vmatrix} 2 & d & e \\\\ 0 & 1 & 0 \\\\ 0 & f & 0 \\end{vmatrix} \\\\ = 3 \\times \\Big( 2 \\times \\begin{vmatrix} 1 & 0 \\\\ f & 0 \\end{vmatrix} \\Big) \\\\ = 6 \\end{split} $$ Podemos ver que os autovalores não dependem de a, b, c, d, e ou f, portanto o item correto é D.",
+            "references": [
+                {"text": "MATHWORLD. Diagonalizable Matrix", "href": "https://mathworld.wolfram.com/DiagonalizableMatrix.html"},
+                {"text": "WIKIPEDIA. Laplace expansion", "href": "https://en.wikipedia.org/wiki/Laplace_expansion"},
+                {"text": "OLIVEIRA, Gabriel Alessandro de", "href": "https://brasilescola.uol.com.br/matematica/teorema-laplace.htm"}
+            ]
+        },
+        {
+            "ID": "02",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "Esse problema irá tratar de Mudança de Base [1][2]. Escrevendo os elementos da base dada como uma combinação linear da base $ (1, t-1, (t-1)^2) $ teremos $$ \\begin{split} 1 + t + t^2 = a_1 + a_2(t-1) + a_3[(t-1)^2] \\\\ a_1 + a_2t - a_2 + a_3t^2 - 2a_3t + a_3 \\\\ (a_1 - a_2 + a_3) + (a_2t - 2a_3t) + a_3t^2 \\end{split} $$ Igualando cada grupo obteremos $$ \\begin{split} 1 = a_1 - a_2 + a_3 \\\\ t = a_2t - 2a_3t \\\\ t^2 = a_3t^2 \\end{split} $$ Resolvendo essas equações a partir de $ a_3 $ nos leva a $ a_3 = 1, a_2 = 3, a_1 = 3 $. Portanto o correto é o item A. Em caso de confusão do motivo de ser o item A, imagine que: $ a_1 = \\lambda, a_2 = \\mu, a_3 = \\eta $.",
+            "references": [
+                {"text": "PIMENTEL, Juliana. Mudança de Bases", "href": "http://hostel.ufabc.edu.br/~juliana.pimentel/AL_aula10.pdf"},
+                {"text": "RUGGIERO, Marcia A. Gomes. Exemplos - Mudança de Base", "href": "https://www.ime.unicamp.br/~marcia/AlgebraLinear/Arquivos%20PDF/exemplos_muda_base.pdf"}
+            ]
+        },
+        {
+            "ID": "03",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 1,
+            "explanation": "Sabendo que o ângulo entre duas retas é dado por $ m = \\frac{y_2 - y_1}{x_2 - x_1} $ e usando o ponto de origem $(0, 0)$ para $y_1$ e $x_1$, calculando portanto o ângulo da reta, teremos $ m = \\frac{2}{-1} = -2 $, devido a $ \\vec{v} = (-1, 2) $. Como o ângulo de ambas as retas são iguais elas são paralelas [1].",
+            "references": [
+                {"text": "GOUVEIA, Rosimar. Retas Paralelas", "href": "https://www.todamateria.com.br/retas-paralelas/"}
+            ]
+        },
+        {
+            "ID": "04",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "O produto interno de dois vetores de tamanho $k $ é dado por $$ \\vec{u} \\cdot \\vec{v} = \\sum_{i=1}^k u_iv_i$$ Já o ângulo formado entre eles é dado por $$ cos(\\theta) = \\frac{\\vec{u} \\cdot \\vec{v}}{||\\vec{u}|| \\times ||\\vec{v}||} $$ Aplicando ambas as fórmulas obtemos $$\\begin{split} \\vec{u} \\cdot \\vec{v} = -15 \\times 8 = -7 \\\\ \\frac{\\vec{u} \\cdot \\vec{v}}{||\\vec{u}|| \\times ||\\vec{v}||} = \\frac{-7}{\\sqrt{41} \\sqrt{13}} = \\frac{-7}{\\sqrt{533}} \\end{split}$$ Uma vez que o cosseno do ângulo é negativo ele deve estar contido no 2º ou 3º quadrante [1]. Como o 72º pertence ao 1º quadrante, temos que o ângulo deve ser 107º. Portanto o item correto é E.",
+            "references": [
+                {"text": "RIBEIRO, Amanda Gonçalves. Redução ao primeiro quadrante no ciclo trigonométrico", "href": "https://brasilescola.uol.com.br/matematica/reducao-ao-primeiro-quadrante-no-ciclo-trigonometrico.htm"}
+            ]
+        },
+        {
+            "ID": "06",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "Pela definição de continuidade temos que a função $ f(x) $ é contínua se $$ \\lim_{x \\to a^-} f(x) = \\lim_{x \\to a^+} f(x) $$ [1]. Utilizando essa definição nos pontos $ -\\frac{\\pi}{2} $ e $ \\frac{\\pi}{2} $ temos: $$\\begin{split} \\lim_{x \\to -\\frac{\\pi}{2}^-} f(x) = \\lim_{x \\to -\\frac{\\pi}{2}^+} f(x) \\\\ \\lim_{x \\to -\\frac{\\pi}{2}} -3 \\times \\sin(x) = \\lim_{x \\to -\\frac{\\pi}{2}} a \\times \\sin(x) + b \\\\ -3 \\times \\sin\\Big(-\\frac{\\pi}{2}\\Big) = a \\times \\sin\\Big(-\\frac{\\pi}{2}\\Big) + b \\\\ 3 = -a+ b \\end{split}$$ Na equação acima pode ser feita a conversão de radianos para degraus para facilitar o uso de uma tabela trigonométrica utilizando a fórmula $ r \\times 180 / \\pi $, onde $ r $ é o valor em radianos. Para o segundo ponto seguimos da mesma maneira $$\\begin{split} a \\times \\sin\\Big(\\frac{\\pi}{2}\\Big) + b = \\cos\\Big(\\frac{\\pi}{2}\\Big) \\\\ a + b = 0 \\end{split}$$ Portanto queremos resolver as equações $$\\begin{split} -a + b = 3 \\\\ a + b =0 \\end{split}$$ Pela última equação sabemos que $ -a = b $, além disso para $ -a + b = 3$ o valor de $ a $ deve ser negativo, portanto o item B está correto.",
+            "references": [
+                {"text": "SÓ MATEMÁTICA. Limites Laterais", "href": "https://www.somatematica.com.br/superior/limites/limites3.php"}
+            ]
+        },
+        {
+            "ID": "01",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "",
+            "references": [
+            ]
+        },
+        {
+            "ID": "01",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "",
+            "references": [
+            ]
+        },
+        {
+            "ID": "01",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "",
+            "references": [
+            ]
+        },
+        {
+            "ID": "01",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "",
+            "references": [
+            ]
+        },
+        {
+            "ID": "01",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "",
+            "references": [
+            ]
+        },
+        {
+            "ID": "01",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "",
+            "references": [
+            ]
+        },
+        {
+            "ID": "01",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "",
+            "references": [
+            ]
+        },
+        {
+            "ID": "01",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "",
+            "references": [
+            ]
+        },
+        {
+            "ID": "01",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "",
+            "references": [
+            ]
+        },
+        {
+            "ID": "01",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "",
+            "references": [
+            ]
+        },
+        {
+            "ID": "01",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "",
+            "references": [
+            ]
+        },
+        {
+            "ID": "01",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "",
+            "references": [
+            ]
+        },
+        {
+            "ID": "01",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "",
+            "references": [
+            ]
+        },
+        {
+            "ID": "01",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "",
+            "references": [
+            ]
+        },
+        {
+            "ID": "01",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "",
+            "references": [
+            ]
+        },
+        {
+            "ID": "01",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "",
+            "references": [
+            ]
+        },
+        {
+            "ID": "01",
+            "area": "MATEMÁTICA",
+            "text": "",
+            "items": [
+
+            ],
+            "rightAnswer": 0,
+            "explanation": "",
+            "references": [
+            ]
+        },
         {
             "ID": "01",
             "area": "MATEMÁTICA",

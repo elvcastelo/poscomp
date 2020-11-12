@@ -33,8 +33,8 @@ function ExamQuestion({ question }) {
         <MathContext content={question.text} />
 
         <div className="exam-question-items">
-          {question.items.map((item) => (
-            <QuestionItem item={item} onClick={checkAnswer} />
+          {question.items.map((item, i) => (
+            <QuestionItem item={item} id={i} onClick={checkAnswer} />
           ))}
         </div>
 

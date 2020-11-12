@@ -15,9 +15,9 @@ function ExamEditor() {
         <p className="exam-editor-subtitle">Ferramenta para facilitar a adição e edição de questões.</p>
         <textarea className="exam-editor-textarea" onChange={(e) => setTextPreview(e.target.value)} defaultValue={textPreview} />
         <div className="exam-editor-preview">
-          <p>Pré-visualização:</p>
+          <p className="bold">Pré-visualização:</p>
           <MathContext content={String.raw`${textPreview}`} />
-          <p>Formatação para JSON:</p>
+          <p className="bold">Formatação para JSON:</p>
           <p>{JSONTextPreview}</p>
         </div>
       </div>
