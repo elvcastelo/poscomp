@@ -1,5 +1,12 @@
 @import '../../_colors.sass'
 
+@keyframes fadeout
+  55%
+    opacity: 0
+  100%
+    opacity: 0
+    transform: scale3d(6, 6, 6)
+
 .banner
   display: flex
   justify-content: center
@@ -14,6 +21,11 @@
   color: $text-color
   font-family: 'Roboto', sans-serif
   font-size: 6.2em
+  animation: fadeout 1s linear infinite
+  animation-play-state: paused
+  animation-delay: calc(var(--scroll) * -1s)
+  animation-iteration-count: 1
+  animation-fill-mode: both
 
 .banner__nav
   display: flex

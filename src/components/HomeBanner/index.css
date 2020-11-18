@@ -1,3 +1,25 @@
+@-webkit-keyframes fadeout {
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(6, 6, 6);
+            transform: scale3d(6, 6, 6);
+  }
+}
+
+@keyframes fadeout {
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(6, 6, 6);
+            transform: scale3d(6, 6, 6);
+  }
+}
+
 .banner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,6 +44,16 @@
   color: #efefef;
   font-family: 'Roboto', sans-serif;
   font-size: 6.2em;
+  -webkit-animation: fadeout 1s linear infinite;
+          animation: fadeout 1s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: calc(var(--scroll) * -1s);
+          animation-delay: calc(var(--scroll) * -1s);
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 .banner__nav {
