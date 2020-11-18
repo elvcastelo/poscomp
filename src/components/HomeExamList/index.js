@@ -18,6 +18,12 @@ function HomeExamList() {
           <p className="exams__exam__year">2017</p>
           <hr className="exams__exam__hr" />
         </div>
+
+        <div className="exam__borders">
+          <div className="exams__exam above" />
+          <div className="exams__exam above" />
+          <div className="exams__exam above" />
+        </div>
       </div>
     </div>
   );
