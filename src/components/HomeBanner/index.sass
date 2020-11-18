@@ -1,31 +1,42 @@
-.home-banner
-    display: grid
-    grid-template-columns: 1fr 1fr
-    height: 80vh
-    padding: 0 80px 0 80px
-    align-content: center
-    .home-banner-text-holder
-        display: flex
-        flex-direction: column
-        justify-content: center
-        h1, p
-            margin: 0
-            font-weight: bold
-        h1
-            font-size: 6em
-        p
-            color: #929495
-    img
-        width: 100%
+@import '../../_colors.sass'
 
-@media screen and ( max-width: 1119px )
-    .home-banner
-        grid-template-rows: 1fr 1fr
-        grid-template-columns: none
-        text-align: center
-        padding: 15px 15px 0 15px
-        height: 50vh
-        .home-banner-text-holder
-            h1
-                font-size: 3em
-    
+.banner
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  height: 100vh
+  background-image: url('./images/banner.svg')
+  background-size: cover
+
+.banner__title
+  margin: 0
+  color: $text-color
+  font-family: 'Roboto', sans-serif
+  font-size: 6.2em
+
+.banner__nav
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  width: 27vw
+  color: $text-color
+
+.banner__nav__item--selected
+  border-bottom: 4px solid $complementary-color
+
+@media screen and ( max-width: 1200px )
+  .banner__nav
+    width: 35vw
+
+@media screen and ( max-width: 900px )
+  .banner
+    background-size: cover
+    background-position-x: 60%
+
+  .banner__title
+    font-size: 4.5em
+  
+  .banner__nav
+    width: 80vw
+    font-size: 0.9em

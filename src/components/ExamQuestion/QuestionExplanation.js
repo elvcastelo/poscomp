@@ -1,18 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import MathJax from '@elvcastelo/mathjax-react';
 import './QuestionExplanation.css';
-import MathContext from '../MathContext';
 
 function QuestionExplanation({ explanation, show, references }) {
-  const showExplanation = (s) => {
-    if (s) {
+  const referencesComponent = (r) => {
+    if (typeof r !== 'undefined') {
       return (
-        <div className="exam-question-explanation">
-          <p className="exam-question-explanation-e">Explicação: </p>
-          <MathContext content={explanation} />
-
+        <>
           <p className="exam-question-explanation-e">Referências: </p>
-          {references.map((ref, i) => (
+          {r.map((ref, i) => (
             <p>
               [
               {i + 1}
@@ -24,6 +21,20 @@ function QuestionExplanation({ explanation, show, references }) {
               </a>
             </p>
           ))}
+        </>
+      );
+    }
+    return <></>;
+  };
+
+  const showExplanation = (s) => {
+    if (s) {
+      return (
+        <div className="exam-question-explanation">
+          <p className="exam-question-explanation-e">Explicação: </p>
+          <MathJax.Node content={explanation} />
+
+          {referencesComponent(references)}
         </div>
       );
     }
@@ -40,7 +51,11 @@ function QuestionExplanation({ explanation, show, references }) {
 QuestionExplanation.propTypes = {
   show: PropTypes.bool.isRequired,
   explanation: PropTypes.string.isRequired,
-  references: PropTypes.arrayOf(PropTypes.string).isRequired,
+  references: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
+};
+
+QuestionExplanation.defaultProps = {
+  references: undefined,
 };
 
 export default QuestionExplanation;

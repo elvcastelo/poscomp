@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './ExamBlock.css';
 import examsData from '../Exam/data/exams.json';
 
-function ExamBlock({ year, questions }) {
+function ExamBlock({ year }) {
   const allDone = <span role="img" aria-label="completo">✔️</span>;
   const incomplete = <span role="img" aria-label="incompleto">❌</span>;
   const N = examsData[year].length;
@@ -19,23 +19,14 @@ function ExamBlock({ year, questions }) {
         {' '}
         de 70
         {' '}
-        {questions === 70 ? allDone : incomplete}
+        {N === 70 ? allDone : incomplete}
       </p>
     </div>
   );
 }
 
 ExamBlock.propTypes = {
-  year: PropTypes.string.isRequired,
-  questions: PropTypes.arrayOf(PropTypes.shape({
-    ID: PropTypes.number.isRequired,
-    area: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
-    items: PropTypes.arrayOf(PropTypes.string).isRequired,
-    rightAnswer: PropTypes.number.isRequired,
-    explanation: PropTypes.string.isRequired,
-    references: PropTypes.arrayOf(PropTypes.string).isRequired,
-  })).isRequired,
+  year: PropTypes.number.isRequired,
 };
 
 export default ExamBlock;

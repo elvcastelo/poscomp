@@ -175,7 +175,7 @@
         {
             "ID": "11",
             "area": "MATEMÁTICA",
-            "text": "Considere as premissas a seguir verdadeiras: $$ \\begin{split} \\text{Premissa 1: Se Daenerys come churrasco ou João anda a cavalo, então Cersei assiste a um filme.} \\\\ \\text{Premissa 2: Hoje, Cersei não assistiu a um filme.} \\\\ \\text{Premissa 3: Se hoje é domingo, entãoDaenerys come churrasco e Jaime treina esgrima.} \\\\ \\text{Premissa 4: Hoje, Jaime foi treinar esgrima.} \\\\ \\end{split} $$ É correto concluir que:",
+            "text": "Considere as premissas a seguir verdadeiras: \n\n Premissa 1: Se Daenerys come churrasco ou João anda a cavalo, então Cersei assiste a um filme. \n Premissa 2: Hoje, Cersei não assistiu a um filme. \n Premissa 3: Se hoje é domingo, então Daenerys come churrasco e Jaime treina esgrima. \n Premissa 4: Hoje, Jaime foi treinar esgrima. \n\n É correto concluir que:",
             "items": [
                 "Hoje é domingo e Daenerys comeu churrasco.",
                 "Hoje não é domingo e Daenerys comeu churrasco.",

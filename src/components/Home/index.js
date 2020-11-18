@@ -1,17 +1,14 @@
 import React from 'react';
 import HomeBanner from '../HomeBanner';
 import HomeExamList from '../HomeExamList';
-import HomeTutorial from '../HomeTutorial';
-import Navbar from '../Navbar';
+import './index.css';
 
 function Home() {
   return (
-    <>
-      <Navbar />
+    <div className="wrapper">
       <HomeBanner />
       <HomeExamList />
-      <HomeTutorial />
-    </>
+    </div>
   );
 }
 

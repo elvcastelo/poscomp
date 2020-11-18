@@ -1,0 +1,8 @@
+.wrapper
+  display: grid
+  grid-template-columns: repeat( 12, [col-start] 1fr)
+  column-gap: 30px
+  overflow: hidden
+
+.wrapper > *
+  grid-column: col-start / 13

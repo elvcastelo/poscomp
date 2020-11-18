@@ -1,56 +1,65 @@
-.home-banner {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  height: 80vh;
-  padding: 0 80px 0 80px;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-
-.home-banner .home-banner-text-holder {
+.banner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  height: 100vh;
+  background-image: url("./images/banner.svg");
+  background-size: cover;
 }
 
-.home-banner .home-banner-text-holder h1, .home-banner .home-banner-text-holder p {
+.banner__title {
   margin: 0;
-  font-weight: bold;
+  color: #efefef;
+  font-family: 'Roboto', sans-serif;
+  font-size: 6.2em;
 }
 
-.home-banner .home-banner-text-holder h1 {
-  font-size: 6em;
+.banner__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 27vw;
+  color: #efefef;
 }
 
-.home-banner .home-banner-text-holder p {
-  color: #929495;
+.banner__nav__item--selected {
+  border-bottom: 4px solid #ff8e61;
 }
 
-.home-banner img {
-  width: 100%;
-}
-
-@media screen and (max-width: 1119px) {
-  .home-banner {
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-    -ms-grid-columns: none;
-        grid-template-columns: none;
-    text-align: center;
-    padding: 15px 15px 0 15px;
-    height: 50vh;
+@media screen and (max-width: 1200px) {
+  .banner__nav {
+    width: 35vw;
   }
-  .home-banner .home-banner-text-holder h1 {
-    font-size: 3em;
+}
+
+@media screen and (max-width: 900px) {
+  .banner {
+    background-size: cover;
+    background-position-x: 60%;
+  }
+  .banner__title {
+    font-size: 4.5em;
+  }
+  .banner__nav {
+    width: 80vw;
+    font-size: 0.9em;
   }
 }
 /*# sourceMappingURL=index.css.map */

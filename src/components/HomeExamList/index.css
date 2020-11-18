@@ -1,53 +1,113 @@
-.home-exams {
-  padding-top: 30px;
-  background-color: #eb4f0b;
-}
-
-.home-exams .home-exams-title, .home-exams .home-exams-subtitle {
-  margin: 0 100px 0 100px;
-  color: white;
-}
-
-.home-exams .home-exams-title {
-  margin-top: 40px;
-}
-
-.home-exams .home-exams-subtitle {
-  font-size: 1.3em;
-  margin-top: 10px;
-  margin-bottom: 40px;
-}
-
-.home-exams-block-holder {
+.exams {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 60px;
-  padding: 20px 100px 50px 100px;
+  -ms-grid-rows: 150px 1fr;
+      grid-template-rows: 150px 1fr;
+  background-image: url("./images/background.svg");
+  background-size: cover;
+  background-position-y: -70px;
+  height: 100vh;
 }
 
-.home-exams-block-holder a {
-  text-decoration: none;
-  color: inherit;
+.exams__title {
+  color: #ff8e61;
+  font-size: 1.4em;
+  font-family: 'Roboto', sans-serif;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-left: 80px;
 }
 
-@media screen and (max-width: 1119px) {
-  .home-exams {
-    margin: 0;
+.exams__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[17];
+      grid-template-columns: repeat(17, 1fr);
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
+}
+
+.exams__exam:nth-child(1) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 5;
+  grid-column: 2 / 7;
+}
+
+.exams__exam {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-radius: 40px;
+  background: linear-gradient(0.6turn, rgba(44, 44, 68, 0.5) 10%, rgba(22, 8, 30, 0.5) 80%);
+  height: 70vh;
+  grid-column: span 5;
+  color: #efefef;
+}
+
+.exams__exam__year {
+  font-size: 2.3em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.exams__exam__year, .exams__exam__hr {
+  margin: 0 0 0 20px;
+}
+
+.exams__exam__hr {
+  margin-bottom: 100px;
+  width: 70%;
+  height: 3px;
+  border: none;
+  background-color: #ff8e61;
+}
+
+.exam__borders .above {
+  position: absolute;
+  z-index: 100;
+  width: 27vw;
+  top: 880px;
+  background: transparent;
+  border: 1px solid #ff8e61;
+}
+
+.exam__borders .above:nth-child(1) {
+  left: 60px;
+}
+
+.exam__borders .above:nth-child(2) {
+  left: 525px;
+}
+
+.exam__borders .above:nth-child(3) {
+  left: 990px;
+}
+
+@media screen and (max-width: 1099px) {
+  .exams__list {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+    -webkit-column-gap: 0;
+            column-gap: 0;
+    grid-row-gap: 20px;
   }
-  .home-exams .home-exams-title, .home-exams .home-exams-subtitle {
-    margin: 10px;
-    text-align: center;
+  .exams__exam:nth-child(1) {
+    grid-column: auto;
   }
-  .home-exams-block-holder {
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
-    grid-column-gap: 0;
-    grid-row-gap: 10px;
-    padding: 10px 10px 50px 10px;
+  .exams__exam {
+    margin: 0 20px 0 20px;
+    border-radius: 20px;
+    height: auto;
   }
 }
 /*# sourceMappingURL=index.css.map */

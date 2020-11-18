@@ -1,15 +1,5 @@
 body {
-  background-color: #eeeff1;
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;
-  color: #242424;
-}
-
-a {
-  color: #242424;
-}
-
-.bold {
-  font-weight: bold;
+  font-family: 'Nunito', sans-serif;
 }

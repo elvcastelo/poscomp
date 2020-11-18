@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import MathJax from '@elvcastelo/mathjax-react';
 import './QuestionItem.css';
-import MathContext from '../MathContext';
 
 function QuestionItem({ onClick, id, item }) {
   const [itemColor, setItemColor] = useState('black');
@@ -26,7 +26,7 @@ function QuestionItem({ onClick, id, item }) {
       tabIndex={0}
       onKeyDown={() => handleClick()}
     >
-      <MathContext content={`${itemsLabel[id]}) ${item}`} />
+      <MathJax.Node content={`${itemsLabel[id]}) ${item}`} />
     </div>
   );
 }

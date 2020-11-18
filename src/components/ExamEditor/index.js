@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import MathContext from '../MathContext';
+import MathJax from '@elvcastelo/mathjax-react';
 import Navbar from '../Navbar';
 import './index.css';
 
@@ -16,7 +16,7 @@ function ExamEditor() {
         <textarea className="exam-editor-textarea" onChange={(e) => setTextPreview(e.target.value)} defaultValue={textPreview} />
         <div className="exam-editor-preview">
           <p className="bold">Pré-visualização:</p>
-          <MathContext content={String.raw`${textPreview}`} />
+          <MathJax.Node content={textPreview} />
           <p className="bold">Formatação para JSON:</p>
           <p>{JSONTextPreview}</p>
         </div>

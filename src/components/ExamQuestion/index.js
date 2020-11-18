@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import MathJax from '@elvcastelo/mathjax-react';
 import './index.css';
 import QuestionItem from './QuestionItem';
-import MathContext from '../MathContext';
 import QuestionExplanation from './QuestionExplanation';
 
 function ExamQuestion({ question }) {
+  const itemsLabel = ['A', 'B', 'C', 'D', 'E'];
   const [showAnswer, setShowAnswer] = useState(false);
 
   const checkAnswer = (key) => {
@@ -30,11 +31,11 @@ function ExamQuestion({ question }) {
           </strong>
           .
         </p>
-        <MathContext content={question.text} />
+        <MathJax.Node content={question.text} />
 
         <div className="exam-question-items">
           {question.items.map((item, i) => (
-            <QuestionItem item={item} id={i} onClick={checkAnswer} />
+            <QuestionItem item={item} id={i} key={itemsLabel[i]} onClick={checkAnswer} />
           ))}
         </div>
 
@@ -58,7 +59,7 @@ ExamQuestion.propTypes = {
     items: PropTypes.arrayOf(PropTypes.string).isRequired,
     rightAnswer: PropTypes.number.isRequired,
     explanation: PropTypes.string.isRequired,
-    references: PropTypes.arrayOf(PropTypes.string).isRequired,
+    references: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
   }).isRequired,
 };
 

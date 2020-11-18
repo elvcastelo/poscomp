@@ -1,0 +1,14 @@
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: ([col-start] 1fr)[12];
+      grid-template-columns: repeat(12, [col-start] 1fr);
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  overflow: hidden;
+}
+
+.wrapper > * {
+  grid-column: col-start / 13;
+}
+/*# sourceMappingURL=index.css.map */
