@@ -50,6 +50,7 @@
   height: 70vh;
   grid-column: span 5;
   color: #efefef;
+  text-decoration: none;
 }
 
 .exams__exam__year {
