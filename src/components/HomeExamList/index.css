@@ -70,6 +70,13 @@
   background-color: #ff8e61;
 }
 
+.exam__borders {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .exam__borders .above {
   position: absolute;
   z-index: 100;

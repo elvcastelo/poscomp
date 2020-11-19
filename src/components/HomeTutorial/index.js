@@ -3,7 +3,7 @@ import './index.css';
 
 function HomeTutorial() {
   return (
-    <div className="tutorial">
+    <div className="tutorial" id="contribute">
       <div className="tutorial__topic">
         <p className="topic__title">Como contribuir</p>
         <p className="topic__text">

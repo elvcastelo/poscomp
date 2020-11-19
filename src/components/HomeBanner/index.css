@@ -75,8 +75,15 @@
   color: #efefef;
 }
 
+.banner__nav__item {
+  color: #efefef;
+  text-decoration: none;
+  -webkit-transition: ease-in-out .5s;
+  transition: ease-in-out .5s;
+}
+
 .banner__nav__item--selected {
-  border-bottom: 4px solid #ff8e61;
+  border-bottom: 3px solid #ff8e61;
 }
 
 @media screen and (max-width: 1200px) {

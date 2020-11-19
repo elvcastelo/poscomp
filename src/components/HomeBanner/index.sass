@@ -35,8 +35,13 @@
   width: 27vw
   color: $text-color
 
+.banner__nav__item
+  color: $text-color
+  text-decoration: none
+  transition: ease-in-out .5s
+
 .banner__nav__item--selected
-  border-bottom: 4px solid $complementary-color
+  border-bottom: 3px solid $complementary-color
 
 @media screen and ( max-width: 1200px )
   .banner__nav
@@ -49,7 +54,7 @@
 
   .banner__title
     font-size: 4.5em
-  
+
   .banner__nav
     width: 80vw
     font-size: 0.9em
