@@ -1,40 +1,47 @@
-.home-tutorial {
-  padding-top: 30px;
-  padding-bottom: 30px;
+.tutorial {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 50px 1fr;
+      grid-template-rows: 1fr 50px 1fr;
+  background: url("./images/background.svg");
+  background-size: cover;
+  height: 100vh;
 }
 
-.home-tutorial .home-tutorial-title, .home-tutorial .home-tutorial-subtitle {
-  margin: 0 100px 0 100px;
+.tutorial__topic:nth-child(1) {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.tutorial__topic {
+  color: #efefef;
+  margin: 0 120px 0 120px;
+}
+
+.topic__title {
+  font-size: 1.5em;
+  font-family: 'Roboto', sans-serif;
   font-weight: bold;
+  color: #ff8e61;
 }
 
-.home-tutorial .home-tutorial-title {
-  margin-top: 40px;
-  font-size: 2em;
-}
-
-.home-tutorial .home-tutorial-subtitle {
-  margin-top: 30px;
+.topic__text {
   font-size: 1.3em;
-  color: #929495;
-  margin-bottom: 10px;
-}
-
-.home-tutorial .home-tutorial-text {
-  font-size: 1.1em;
   text-align: justify;
-  margin: 0 100px 0 100px;
 }
 
-@media screen and (max-width: 1119px) {
-  .home-tutorial {
-    margin: 0 10px 0 10px;
-  }
-  .home-tutorial .home-tutorial-title, .home-tutorial .home-tutorial-subtitle {
-    text-align: center;
-  }
-  .home-tutorial .home-tutorial-text, .home-tutorial .home-tutorial-title {
-    margin: 10px;
-  }
+.tutorial__division {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.tutorial__division hr {
+  border: none;
+  height: 2px;
+  background-color: #ff8e61;
+  width: 45%;
+  margin: 0 0 0 120px;
 }
 /*# sourceMappingURL=index.css.map */

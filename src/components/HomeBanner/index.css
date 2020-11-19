@@ -54,6 +54,10 @@
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .banner__nav {

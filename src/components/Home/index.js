@@ -1,6 +1,8 @@
 import React from 'react';
 import HomeBanner from '../HomeBanner';
 import HomeExamList from '../HomeExamList';
+import HomeTutorial from '../HomeTutorial';
+import Footer from '../Footer';
 import './index.css';
 
 function Home() {
@@ -12,6 +14,8 @@ function Home() {
     <div className="wrapper">
       <HomeBanner />
       <HomeExamList />
+      <HomeTutorial />
+      <Footer />
     </div>
   );
 }

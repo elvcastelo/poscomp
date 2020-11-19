@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,iBAAiB,CAAC;EACd,OAAO,EAAE,IAAI;EACb,gBAAgB,EAAE,KAAK;EACvB,aAAa,EAAE,IAAI;CAII;;AAP3B,AAKI,iBALa,CAKb,mBAAmB,CAAC;EAChB,WAAW,EAAE,IAAI;EACjB,KAAK,EAAE,OAAO;CAAG",
-    "sources": [
-        "ExamBlock.sass"
-    ],
-    "names": [],
-    "file": "ExamBlock.css"
-}

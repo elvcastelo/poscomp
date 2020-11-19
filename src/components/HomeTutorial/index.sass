@@ -1,26 +1,34 @@
-.home-tutorial
-    padding-top: 30px
-    padding-bottom: 30px
-    .home-tutorial-title, .home-tutorial-subtitle
-        margin: 0 100px 0 100px
-        font-weight: bold
-    .home-tutorial-title
-        margin-top: 40px
-        font-size: 2em
-    .home-tutorial-subtitle
-        margin-top: 30px
-        font-size: 1.3em
-        color: #929495
-        margin-bottom: 10px
-    .home-tutorial-text
-        font-size: 1.1em
-        text-align: justify
-        margin: 0 100px 0 100px
-        
-@media screen and ( max-width: 1119px )
-    .home-tutorial
-        margin: 0 10px 0 10px
-        .home-tutorial-title, .home-tutorial-subtitle
-            text-align: center
-        .home-tutorial-text, .home-tutorial-title
-            margin: 10px
+@import '../../_colors.sass'
+    
+.tutorial
+    display: grid
+    grid-template-rows: 1fr 50px 1fr
+    background: url('./images/background.svg')
+    background-size: cover
+    height: 100vh
+
+.tutorial__topic:nth-child(1)
+    align-self: end
+
+.tutorial__topic
+    color: $text-color
+    margin: 0 120px 0 120px
+
+.topic__title
+    font-size: 1.5em
+    font-family: 'Roboto', sans-serif
+    font-weight: bold
+    color: $complementary-color
+
+.topic__text
+    font-size: 1.3em
+    text-align: justify
+
+.tutorial__division
+    align-self: center
+    hr
+        border: none
+        height: 2px
+        background-color: $complementary-color
+        width: 45%
+        margin: 0 0 0 120px
